@@ -15,7 +15,7 @@ function App() {
               Case study
             </div>
             <a
-              href="#"
+              href="google.com"
               className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
             >
               Finding customers for your new business
