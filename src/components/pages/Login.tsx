@@ -8,7 +8,7 @@ export const Login: VFC = memo(() => {
         <div>
           <h1 className='text-2xl font-bold text-center mb-4 cursor-pointer'>Welcome Back!</h1>
           <p className='w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer'>
-            Create an account to enjoy all the services without any ads for free!
+            Sign in with your user ID! People are waiting for you. 
           </p>
         </div>
         <div className='space-y-4'>
@@ -24,7 +24,7 @@ export const Login: VFC = memo(() => {
             Sign in
           </button>
           <p className='mt-4 text-sm'>
-            You don't have an account yet?{' '}
+            You don't have an account yet?
             <span className='underline cursor-pointer'> Sign Up</span>
           </p>
         </div>
