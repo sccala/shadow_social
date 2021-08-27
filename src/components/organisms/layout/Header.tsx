@@ -23,10 +23,10 @@ export const Header: VFC = memo(() => {
           <span className='ml-3 text-xl'>GhostChat</span>
         </a>
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-          <a href='/home/user_management' className='mr-5 hover:text-gray-900'>
+          <a href='/user_management' className='mr-5 hover:text-gray-900'>
             User All
           </a>
-          <a href='/home/setting' className='mr-5 hover:text-gray-900'>
+          <a href='/setting' className='mr-5 hover:text-gray-900'>
             Setting
           </a>
           <a href='/setting' className='mr-5'>
@@ -34,9 +34,7 @@ export const Header: VFC = memo(() => {
           </a>
         </nav>
         <button className='inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0'>
-                  Logout
-                  <a href='/home/user_management'>
-          </a>
+          Logout
         </button>
       </div>
     </header>
