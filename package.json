@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@heroicons/react": "^1.0.4",
     "@types/react-router-dom": "^5.1.8",
     "axios": "^0.21.1",
     "cra-template-typescript": "1.1.2",
