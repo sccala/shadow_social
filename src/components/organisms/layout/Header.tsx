@@ -30,7 +30,7 @@ export const Header: VFC = memo(() => {
           </svg>
 
           <span className='ml-3 text-xl  cursor-pointer' onClick={onClickHome}>
-            ShadowChat
+            Chat App
           </span>
         </div>
         <nav className='sm:ml-auto flex flex-wrap items-center text-base justify-center cursor-pointer'>
@@ -67,7 +67,7 @@ export const Header: VFC = memo(() => {
               </svg>
             </button>
             <span className='ml-3 text-md cursor-pointer' onClick={onClickHome}>
-              ShadowChat
+              Chat App
             </span>
           </div>
           <svg

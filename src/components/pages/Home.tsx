@@ -13,7 +13,7 @@ export const Home: VFC = memo(() => {
         >
           <div>
             <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-4xl text-center md:text-left md:flex'>
-              Welcome to the Shadow Chat.
+              Welcome to the Chat App.
             </h2>
             <p className='mt-4 text-gray-500 text-center md:text-left md:flex'>
               The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards.
