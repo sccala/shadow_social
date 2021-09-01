@@ -29,7 +29,7 @@ export const Header: VFC = memo(() => {
             <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
           </svg>
 
-          <span className='ml-3 text-xl  cursor-pointer' onClick={onClickHome}>
+          <span className='ml-3 text-xl cursor-pointer' onClick={onClickHome}>
             Chat App
           </span>
         </div>
@@ -51,42 +51,46 @@ export const Header: VFC = memo(() => {
       <div className='cursor-pointer'>
         <div className='flex justify-between md:hidden px-8 py-4'>
           <div className='flex'>
-            <button>
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                className='w-8 h-8 text-white p-2 bg-indigo-500 rounded-full flex self-center'
-                viewBox='0 0 24 24'
-                onClick={onClickHome}
-              >
-                <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
-              </svg>
-            </button>
-            <span className='ml-3 text-md cursor-pointer' onClick={onClickHome}>
-              Chat App
-            </span>
-          </div>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-          >
-            <path
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              stroke='currentColor'
               stroke-linecap='round'
               stroke-linejoin='round'
               stroke-width='2'
-              d='M4 6h16M4 12h16M4 18h16'
-            />
-          </svg>
+              className='w-8 h-8 text-white p-2 bg-indigo-500 rounded-full flex self-center'
+              viewBox='0 0 24 24'
+              onClick={onClickHome}
+            >
+              <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
+            </svg>
+
+            <span
+              className='ml-3 title-font font-medium items-center text-gray-900  cursor-pointer'
+              onClick={onClickHome}
+            >
+              Chat App
+            </span>
+          </div>
+          <button onClick={() => setNavbarOpen(!navbarOpen)}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M4 6h16M4 12h16M4 18h16'
+              />
+            </svg>
+          </button>
         </div>
-       {/* collapsable navbar */}
-        <div className={  navbarOpen ? ' flex' : ' hidden'}>
+        {/* collapsable navbar */}
+        <div className={'md:hidden'+ (navbarOpen ? ' block' : ' hidden')}>
           <div
             onClick={onClickUserManagement}
             className='text-center block text-base hover:text-gray-900 mb-1'
