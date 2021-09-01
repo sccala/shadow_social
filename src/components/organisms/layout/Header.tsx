@@ -12,7 +12,7 @@ export const Header: VFC = memo(() => {
     <header className='text-gray-600 body-font bg-gray-50'>
       <div className='container mx-auto  p-5 flex-col md:flex-row hidden md:flex items-center'>
         <div
-          className='flex title-font font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
+          className='flex font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
           onClick={onClickHome}
         >
           <svg
@@ -66,7 +66,7 @@ export const Header: VFC = memo(() => {
             </svg>
 
             <span
-              className='ml-3 title-font font-medium items-center text-gray-900  cursor-pointer'
+              className='ml-3 font-medium items-center text-gray-900  cursor-pointer'
               onClick={onClickHome}
             >
               Chat App
