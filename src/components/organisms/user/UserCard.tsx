@@ -11,8 +11,6 @@ export const UserCard: VFC = memo(() => {
         />
         <p className='text-gray-900 text-md text-center font-bold'>Fake Name</p>
         <p className='text-base text-center'>ID:1</p>
-        <p className='text-base text-center'>Hello I'm feeling good today</p>
-        <p className='text-base text-center'>Twitter: @scsds</p>
       </div>
     </>
   )
