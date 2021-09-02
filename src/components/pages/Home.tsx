@@ -1,4 +1,5 @@
 import { VFC, memo } from 'react'
+import { MessageSuccess } from '../molecules/Messages'
 
 export const Home: VFC = memo(() => {
   return (
@@ -30,6 +31,7 @@ export const Home: VFC = memo(() => {
           </div>
         </div>
       </section>
+      
     </>
   )
 })
