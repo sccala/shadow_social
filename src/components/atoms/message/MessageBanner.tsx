@@ -1,4 +1,5 @@
 import { VFC, memo } from 'react'
+import classnames from 'classnames'
 
 type Props = {
   children?: string
@@ -6,14 +7,17 @@ type Props = {
   loading?: boolean
   title: string
   description: string
+  bgColor: string
+  textColor: string
+  borderColor: string
 }
 
 export const MessageBanner: VFC<Props> = memo(props => {
-  const { title, description } = props
+  const { title, description, bgColor, textColor, borderColor } = props
   return (
     <>
       <div
-        className='bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md duration-1000'
+        className={`${bgColor} ${textColor} ${borderColor} pointer-events-autoborder-t-4 rounded-b  px-4 py-3 shadow-md duration-1000`}
         role='alert'
       >
         <div className='flex'>
@@ -34,8 +38,8 @@ export const MessageBanner: VFC<Props> = memo(props => {
             </svg>
           </div>
           <div>
-            <p className='font-bold'>{ title }</p>
-            <p className='text-sm'>{ description }</p>
+            <p className='font-bold'>{title}</p>
+            <p className='text-sm'>{description}</p>
           </div>
         </div>
       </div>
