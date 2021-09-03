@@ -17,14 +17,19 @@ export const MessageBanner: VFC<Props> = memo(props => {
   return (
     <>
       <div
-        className={`${bgColor} ${textColor} ${borderColor} pointer-events-autoborder-t-4 rounded-b  px-4 py-3 shadow-md duration-1000`}
+        className={classnames(
+          'pointer-events-auto border-t-4 rounded-b px-4 py-3 shadow-md duration-1000',
+          { bgColor },
+          { textColor },
+          { borderColor }
+        )}
         role='alert'
       >
         <div className='flex'>
           <div className='py-1'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6'
+              className='h-6 w-6 mr-4'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'

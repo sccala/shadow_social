@@ -6,9 +6,9 @@ export const MessageSuccess: VFC = () => {
     <MessageBanner
       title='Welcome Back'
       description='You have successfully logged in'
-      bgColor='.bg-teal-100'
-      textColor='.teal-900'
-      borderColor='.border-teal-500'
+      bgColor='.bg-green-100'
+      textColor='.green-900'
+      borderColor='.border-green-500'
     />
   )
 }
@@ -18,9 +18,9 @@ export const MessageError: VFC = () => {
     <MessageBanner
       title='Oops'
       description='Something went wrong. Please try again.'
-      bgColor='bg-teal-100'
-      textColor='teal-900'
-      borderColor='border-teal-500'
+      bgColor='bg-red-100'
+      textColor='red-900'
+      borderColor='border-red-500'
     />
   )
 }
