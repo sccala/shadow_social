@@ -10,18 +10,19 @@ type Props = {
   bgColor: string
   textColor: string
   borderColor: string
+  svgIcon: string
 }
 
 export const MessageBanner: VFC<Props> = memo(props => {
-  const { title, description, bgColor, textColor, borderColor } = props
+  const { title, description, bgColor, textColor, borderColor, svgIcon } = props
   return (
     <>
       <div
         className={classnames(
-          'pointer-events-auto border-t-4 rounded-b px-4 py-3 shadow-md duration-1000',
-          { bgColor },
-          { textColor },
-          { borderColor }
+          'pointer-events-auto border-t-4 rounded-b px-4 py-3 shadow-md mb-8 duration-1000',
+          bgColor,
+          textColor,
+          borderColor
         )}
         role='alert'
       >
@@ -38,9 +39,10 @@ export const MessageBanner: VFC<Props> = memo(props => {
                 stroke-linecap='round'
                 stroke-linejoin='round'
                 stroke-width='2'
-                d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                d={svgIcon}
               />
             </svg>
+            
           </div>
           <div>
             <p className='font-bold'>{title}</p>
