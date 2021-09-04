@@ -32,9 +32,6 @@ export const Home: VFC = memo(() => {
           </div>
         </div>
       </section>
-      <MessageSuccess />
-      <MessageError />
-      
     </>
   )
 })

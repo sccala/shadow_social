@@ -1,6 +1,8 @@
-import { VFC, memo } from 'react'
+import { VFC, memo, useState } from 'react'
 
 export const Login: VFC = memo(() => {
+  const [usrId, setUsrId]=useState('')
+
   return (
     <div className='min-h-screen bg-purple-500 flex justify-center items-center'>
       <div className=' ' />
