@@ -1,35 +1,40 @@
 import axios from 'axios'
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { useHistory } from 'react-router'
+import { User } from '../types/api/user'
+import { MessageError } from '../components/molecules/Messages'
+import { MessageSuccess } from '../components/molecules/Messages'
+import { MessageWarning } from '../components/molecules/Messages'
 
+export const useAuth = () => {
+  const history = useHistory()
+  const { setLoginUser } = useLoginUser()
+  const [loading, setLoading] = useState(false)
 
-export const useAuth = ()=>{
-    const history=useHistory()
-    const {showMessage} = useMessage()
-    const {setLoginUser} = useLoginUser()
-const [loading, setLoading] = useState(false)
-
-const login = useCallback(()=>{
-    setLoading(true)
-    axios
-    .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .then((res)=>{
-        if(res.data){
-            const isAdmin = res.data.id===10?true:false
-            setLoginUser({...res.data, isAdmin})
-            showMessage({title: 'Login success', status:'success'})
+  const login = useCallback(
+    (id: string) => {
+      setLoading(true)
+      axios
+        .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
+        .then(res => {
+          if (res.data) {
+            const isAdmin = res.data.id === 10 ? true : false
+            setLoginUser({ ...res.data, isAdmin }) 
             history.push('./home')
-        }else{
-            showMessage({title:'User not found', status: 'error'})
+            return (<MessageSuccess  /> )
+          } else {
+            
             setLoading(false)
-        }
-    })
-    .catch(()=>{
-        showMessage({title:'Cannot login', status: 'error'})
-        setLoading(false)
-    })
-
-}, [history, showMessage, setLoginUser]
-)
-return {login, loading}
+            return <MessageWarning />
+          }
+        })
+        .catch(() => {
+          
+          setLoading(false)
+          return <MessageError />
+        })
+    },
+    [history, setLoginUser]
+  )
+  return { login, loading }
 }
