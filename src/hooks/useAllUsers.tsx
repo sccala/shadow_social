@@ -5,14 +5,18 @@ import { MessageError, MessageSuccess } from '../components/molecules/Messages'
 
 export const useAllUsers = () => {
   const [loading, setLoading] = useState<boolean>(false)
-  const [users, setUsers] = useState()
+  const [users, setUsers] = useState(null)
   const getUsers = useCallback(() => {
     axios
       .get<Array<User>>('https://jsonplaceholder.typicode.com/users')
-      .then((res) => setUsers(res.data))
-      .catch(() => {
-
-      })
+      .then(res => {
+        setUsers(res.data)})
+         .catch(() => {
+           return <MessageError />
+         })
+         .finally(()=>{
+           setLoading(false)
+         })
   }, [])
   return { getUsers, loading, users }
 }

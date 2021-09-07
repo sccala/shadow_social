@@ -5,6 +5,7 @@ import { User } from '../types/api/user'
 import { MessageError } from '../components/molecules/Messages'
 import { MessageSuccess } from '../components/molecules/Messages'
 import { MessageWarning } from '../components/molecules/Messages'
+import { useLoginUser } from './useLoginUser'
 
 export const useAuth = () => {
   const history = useHistory()
@@ -23,16 +24,15 @@ export const useAuth = () => {
             history.push('./home')
             return (<MessageSuccess  /> )
           } else {
-            
             setLoading(false)
             return <MessageWarning />
           }
         })
         .catch(() => {
-          
           setLoading(false)
           return <MessageError />
         })
+        .finally(()=>setLoading(false))
     },
     [history, setLoginUser]
   )
