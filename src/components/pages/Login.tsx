@@ -1,5 +1,6 @@
 import { VFC, memo, useState, ChangeEvent } from 'react'
 import { useAuth } from '../../hooks/useAuth'
+import { PrimaryButton } from '../atoms/button/PrimaryButton'
 
 export const Login: VFC = memo(() => {
   const [userId, setUserId] = useState('')
@@ -29,11 +30,12 @@ export const Login: VFC = memo(() => {
           />
         </div>
         <div className='text-center mt-6'>
-          <button 
-          onClick={onClickLogin} 
-          className='py-3 w-64 text-md text-white bg-purple-400 rounded-2xl'>
+          <PrimaryButton 
+          disabled={userId === ''} 
+          onClick={onClickLogin}
+          loading={loading}>
             Sign in
-          </button>
+          </PrimaryButton>
           <p className='mt-4 text-sm'>
             You don't have an account yet?
             <span className='underline cursor-pointer'> Sign Up</span>

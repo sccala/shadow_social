@@ -2,9 +2,6 @@ import { VFC, memo } from 'react'
 import classnames from 'classnames'
 
 type Props = {
-  children?: string
-  disabled?: boolean
-  loading?: boolean
   title: string
   description: string
   bgColor: string

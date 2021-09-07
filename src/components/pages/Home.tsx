@@ -1,6 +1,4 @@
 import { VFC, memo } from 'react'
-import { MessageError, MessageSuccess } from '../molecules/Messages'
-
 
 export const Home: VFC = memo(() => {
   return (

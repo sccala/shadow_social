@@ -20,19 +20,21 @@ export const useAuth = () => {
         .then(res => {
           if (res.data) {
             const isAdmin = res.data.id === 10 ? true : false
-            setLoginUser({ ...res.data, isAdmin }) 
+            setLoginUser({ ...res.data, isAdmin })
             history.push('./home')
-            return (<MessageSuccess  /> )
+            alert('login success')
+            return <MessageSuccess />
           } else {
             setLoading(false)
+            alert('login error')
             return <MessageWarning />
           }
         })
         .catch(() => {
           setLoading(false)
+          alert('login error')
           return <MessageError />
         })
-        .finally(()=>setLoading(false))
     },
     [history, setLoginUser]
   )
