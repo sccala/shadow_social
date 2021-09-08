@@ -1,25 +1,13 @@
-import { useEffect, useState } from "react"
-import { MessageError } from "../components/molecules/Messages"
+import { useCallback } from 'react'
+import { MessageError } from '../components/molecules/Messages'
 
-const useMessage = ({ variant, children }) => {
-  const [show, setShow] = useState(true)
-
-  useEffect(() => {
-    const timeId = setTimeout(() => {
-      setShow(false)
-    }, 3000)
-
-    return () => {
-      clearTimeout(timeId)
-    }
-  }, [])
-
-  if (!show) {
-    return null
-  }
-
-  return <MessageError />
+type Props = {
+  title: string
+  status: 'info' | 'warning' | 'success' | 'error'
 }
-
-
-export default useMessage
+export const useMessage = () => {
+  const showMessage = useCallback((props: Props) => {
+    return <MessageError />
+  }, [])
+  return { showMessage }
+}
