@@ -3,8 +3,8 @@ import { useAuth } from '../../hooks/useAuth'
 import { PrimaryButton } from '../atoms/button/PrimaryButton'
 
 export const Login: VFC = memo(() => {
-  const [userId, setUserId] = useState('')
-  const { login, loading } = useAuth()
+  const [userId, setUserId] = useState<string>('')
+  const { login } = useAuth()
 
   const onCangeUserId = (e: ChangeEvent<HTMLInputElement>) => setUserId(e.target.value)
   const onClickLogin = () => login(userId)
@@ -30,10 +30,7 @@ export const Login: VFC = memo(() => {
           />
         </div>
         <div className='text-center mt-6'>
-          <PrimaryButton 
-          disabled={userId === ''} 
-          onClick={onClickLogin}
-          loading={loading}>
+          <PrimaryButton disabled={userId === ""} onClick={onClickLogin} >
             Sign in
           </PrimaryButton>
           <p className='mt-4 text-sm'>

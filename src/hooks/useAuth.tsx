@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useCallback, useState } from 'react'
+import { useCallback } from 'react'
 import { useHistory } from 'react-router'
 import { User } from '../types/api/user'
 import { MessageError } from '../components/molecules/Messages'
@@ -10,11 +10,9 @@ import { useLoginUser } from './useLoginUser'
 export const useAuth = () => {
   const history = useHistory()
   const { setLoginUser } = useLoginUser()
-  const [loading, setLoading] = useState(false)
 
   const login = useCallback(
     (id: string) => {
-      setLoading(true)
       axios
         .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(res => {
@@ -25,18 +23,16 @@ export const useAuth = () => {
             alert('login success')
             return <MessageSuccess />
           } else {
-            setLoading(false)
-            alert('login error')
+            alert('User not found')
             return <MessageWarning />
           }
         })
         .catch(() => {
-          setLoading(false)
           alert('login error')
           return <MessageError />
         })
     },
     [history, setLoginUser]
   )
-  return { login, loading }
+  return { login }
 }
