@@ -2,11 +2,11 @@ import axios from 'axios'
 import { useCallback } from 'react'
 import { useHistory } from 'react-router'
 import { User } from '../types/api/user'
-import { useLoginUser } from './useLoginUser'
+// import { useLoginUser } from './providers/LoginUserProvider'
 
 export const useAuth = () => {
   const history = useHistory()
-  const { setLoginUser } = useLoginUser()
+  // const { setLoginUser } = useLoginUser()
 
   const login = useCallback(
     (id: string) => {
@@ -14,8 +14,8 @@ export const useAuth = () => {
         .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(res => {
           if (res.data) {
-            const isAdmin = res.data.id === 10 ? true : false
-            setLoginUser({ ...res.data, isAdmin })
+            // const isAdmin = res.data.id === 10 ? true : false
+            // setLoginUser({ ...res.data, isAdmin })
             history.push('./home')
             alert('login success')
           } else {
@@ -26,7 +26,8 @@ export const useAuth = () => {
           alert('login error')
         })
     },
-    [history, setLoginUser]
+    [history]
+    // [history, setLoginUser]
   )
   return { login }
 }
