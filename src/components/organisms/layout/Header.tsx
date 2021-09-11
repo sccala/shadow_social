@@ -10,7 +10,7 @@ export const Header: VFC = memo(() => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <header className='text-gray-600 body-font bg-gray-50'>
-      <div className='container mx-auto  p-5 flex-col md:flex-row hidden md:flex items-center'>
+      <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center'>
         <div
           className='flex font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
           onClick={onClickHome}
@@ -42,7 +42,6 @@ export const Header: VFC = memo(() => {
           </div>
           <div className='mr-5'>Third Link</div>
         </nav>
-
         <button className=' items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
           Logout
         </button>
