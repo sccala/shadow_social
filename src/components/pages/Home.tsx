@@ -1,6 +1,9 @@
 import { VFC, memo } from 'react'
+import { PrimaryButton } from '../atoms/button/PrimaryButton'
 
 export const Home: VFC = memo(() => {
+  const onClickChat = () => {}
+
   return (
     <>
       <section>
@@ -53,6 +56,9 @@ export const Home: VFC = memo(() => {
             </p>
           </div>
         </div>
+      </section>
+      <section>
+        <PrimaryButton onClick={onClickChat}>Dive into the Shadow chat</PrimaryButton>
       </section>
     </>
   )
