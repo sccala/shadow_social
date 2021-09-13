@@ -6,6 +6,7 @@ export const Header: VFC = memo(() => {
   const onClickHome = useCallback(() => history.push('/home'), [history])
   const onClickUserManagement = useCallback(() => history.push('/home/user_management'), [history])
   const onClickSetting = useCallback(() => history.push('/home/setting'), [history])
+  const onClickAbout=useCallback(()=>history.push('/home/about'),[history])
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
@@ -40,7 +41,9 @@ export const Header: VFC = memo(() => {
           <div onClick={onClickSetting} className='mr-5 hover:text-gray-900'>
             Setting
           </div>
-          <div className='mr-5'>Third Link</div>
+          <div onClick={onClickAbout} className='mr-5'>
+            About
+          </div>
         </nav>
         <button className=' items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
           Logout
@@ -89,7 +92,7 @@ export const Header: VFC = memo(() => {
           </button>
         </div>
         {/* collapsable navbar */}
-        <div className={'md:hidden'+ (navbarOpen ? ' block' : ' hidden')}>
+        <div className={'md:hidden' + (navbarOpen ? ' block' : ' hidden')}>
           <div
             onClick={onClickUserManagement}
             className='text-center block text-base hover:text-gray-900 mb-1'
