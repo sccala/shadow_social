@@ -57,8 +57,8 @@ export const Home: VFC = memo(() => {
           </div>
         </div>
       </section>
-      <section className='bg-purple-200 h-56 mx-auto w-100 w-full flex-row align-items-center'>
-        <div className='container  mx-auto mb-8'>
+      <section className='bg-gray-100 h-56 flex items-center '>
+        <div className='container flex justify-center mb-8'>
           <PrimaryButton onClick={onClickChat}>Dive into the Shadow chat</PrimaryButton>
         </div>
       </section>
