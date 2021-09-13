@@ -40,7 +40,7 @@ export const Home: VFC = memo(() => {
         >
           <div className='gap-2 sm:gap-6 lg:gap-4'>
             <img
-              src='https://source.unsplash.com/random'
+              src='/asset/images/clearbox.jpg'
               alt='shadow on eyes'
               className='bg-gray-100 content-center rounded-lg'
             />
@@ -57,8 +57,8 @@ export const Home: VFC = memo(() => {
           </div>
         </div>
       </section>
-      <section>
-        <div className='container items-center mx-auto'>
+      <section className='bg-purple-200 h-56 mx-auto w-100 w-full flex-row align-items-center'>
+        <div className='container  mx-auto mb-8'>
           <PrimaryButton onClick={onClickChat}>Dive into the Shadow chat</PrimaryButton>
         </div>
       </section>
