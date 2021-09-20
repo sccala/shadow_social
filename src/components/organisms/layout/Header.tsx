@@ -31,7 +31,7 @@ export const Header: VFC = memo(() => {
           </svg>
 
           <span className='ml-3 text-xl cursor-pointer' onClick={onClickHome}>
-            Chat App
+            Shadow Chat
           </span>
         </div>
         <nav className='sm:ml-auto flex flex-wrap items-center text-base justify-center cursor-pointer'>
