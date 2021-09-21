@@ -1,5 +1,6 @@
 import { VFC, memo } from 'react'
 import { Route, Switch } from 'react-router'
+import { DashboardChat } from '../components/pages/Dashboard'
 import { Login } from '../components/pages/Login'
 import { Page404 } from '../components/pages/Page404'
 import { FooterLayout } from '../components/template/FooterLayout'
@@ -25,6 +26,10 @@ export const Router: VFC = memo(() => {
           </Switch>
         )}
       />
+      <Route exact path='/chat'>
+        <HeaderLayout />
+        <DashboardChat />
+      </Route>
       <Route path='*'>
         <Page404 />
       </Route>

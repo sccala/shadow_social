@@ -1,4 +1,5 @@
 import { About } from "../components/pages/About"
+import { DashboardChat } from "../components/pages/Dashboard"
 import { Home } from "../components/pages/Home"
 import { Page404 } from "../components/pages/Page404"
 import { Setting } from "../components/pages/Setting"
@@ -24,6 +25,11 @@ export const homeRoutes = [
     path: '/setting',
     exact: false,
     children: <Setting />,
+  },
+  {
+    path: '/chat',
+    exact: false,
+    children: <DashboardChat />,
   },
   {
     path: '*',

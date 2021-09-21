@@ -3,7 +3,7 @@ import { useHistory } from 'react-router'
 
 export const Header: VFC = memo(() => {
   const history = useHistory()
-  const onClickHome = useCallback(() => history.push('/home'), [history])
+  const onClickHome = useCallback(() => history.push('/home/chat'), [history])
   const onClickUserManagement = useCallback(() => history.push('/home/user_management'), [history])
   const onClickSetting = useCallback(() => history.push('/home/setting'), [history])
   const onClickAbout=useCallback(()=>history.push('/home/about'),[history])
