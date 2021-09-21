@@ -46,7 +46,7 @@ export const Header: VFC = memo(() => {
           </div>
         </nav>
         <button className=' items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
-          Logout
+          Login
         </button>
       </div>
       {/* mobile navbar */}

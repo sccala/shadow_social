@@ -5,7 +5,7 @@ import { MessageError } from '../components/molecules/Messages'
 
 export const useAllUsers = () => {
   const [loading, setLoading] = useState(false)
-  const [users, setUsers] = useState<Array<User>>()
+  const [users, setUsers] = useState<Array<User>>([])
   const getUsers = useCallback(() => {
     setLoading(true)
     axios

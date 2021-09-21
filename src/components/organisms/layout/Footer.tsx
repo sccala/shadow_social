@@ -30,7 +30,7 @@ export const Footer: VFC = memo(() => {
               Air plant banjo lyft occupy retro adaptogen indego
             </p>
           </div>
-          <div className='flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
+          <div className='flex-grow flex flex-wrap justify-end md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
             <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
               <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
               <nav className='list-none mb-10 text-white text-sm hover:text-indigo-300'>
@@ -56,57 +56,7 @@ export const Footer: VFC = memo(() => {
                 </li>
               </nav>
             </div>
-            <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
-              <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
-              <nav className='list-none mb-10 text-sm text-white hover:text-indigo-300'>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
-              <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
-              <nav className='list-none mb-10 text-white text-sm hover:text-indigo-300'>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
+            <div className=' lg:w-1/4 md:w-1/2 w-full px-4'>
               <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
               <nav className='list-none mb-10 text-sm text-white hover:text-indigo-300'>
                 <li>
