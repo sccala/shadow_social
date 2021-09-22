@@ -15,25 +15,35 @@ export const About: VFC = memo(() => {
       ) : (
         <>
           {/* <div style={{ backgroundImage: `url('${'/asset/images/abouthero.jpg'}}')` }} /> */}
-          <div
-            className=' w-screen text-center absolute xl:m-36 lg:m-28 md:m-20 sm:m-12
+
+          {/* <div
+            className='grid w-screen text-center  
           lg:w-3/5  md:w-4/5 text-white'
+          ></div> */}
+          <div
+            className='contenair py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
+            style={{
+              backgroundImage: 'url( /asset/images/abouthero.jpg )',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }}
           >
-            <h2 className='relative md:text-5xl sm:text-4xl xl:text-6xl  leading-tight'>
+            <h2 className='col-start-2 col-span-4 md:text-5xl text-4xl xl:text-6xl leading-tight'>
               Welcome to the Chat App.
             </h2>
-            <p className='mt-8 relative md:text-md'>
+            <p className='col-start-2 col-span-4 md:text-md'>
               IMAGINE A PLACE... ...where you can belong to a school club, a gaming group, or a
               worldwide art community. Where just you and a handful of friends can spend time
               together. A place that makes it easy to talk every day and hang out more often.
             </p>
-            <PrimaryButton className='mt-8  relative' onClick={onClickLogin}>
+            <PrimaryButton className='col-start-2 mx-auto col-span-4 justify-center  ' onClick={onClickLogin}>
               Sign up!
             </PrimaryButton>
-            <i className='pt-4 relative text-center'>
+            <i className='pt-4 col-start-2 col-span-4 text-center '>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='relative justify-center mx-auto h-16 w-16 animate-bounce'
+                className='mx-auto h-16 w-16 animate-bounce'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='white'
@@ -47,7 +57,6 @@ export const About: VFC = memo(() => {
               </svg>
             </i>
           </div>
-          <img className='w-screen h-screen' src='/asset/images/abouthero.jpg' alt='abouthero' />
 
           <section className='mt-44'>
             <div
