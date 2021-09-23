@@ -14,12 +14,6 @@ export const About: VFC = memo(() => {
         </div>
       ) : (
         <>
-          {/* <div style={{ backgroundImage: `url('${'/asset/images/abouthero.jpg'}}')` }} /> */}
-
-          {/* <div
-            className='grid w-screen text-center  
-          lg:w-3/5  md:w-4/5 text-white'
-          ></div> */}
           <div
             className='contenair py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
             style={{
@@ -30,14 +24,17 @@ export const About: VFC = memo(() => {
             }}
           >
             <h2 className='col-start-2 col-span-4 md:text-5xl text-4xl xl:text-6xl leading-tight'>
-              Welcome to the Chat App.
+              Welcome to the Shadow Chat.
             </h2>
             <p className='col-start-2 col-span-4 md:text-md'>
               IMAGINE A PLACE... ...where you can belong to a school club, a gaming group, or a
               worldwide art community. Where just you and a handful of friends can spend time
               together. A place that makes it easy to talk every day and hang out more often.
             </p>
-            <PrimaryButton className='col-start-2 mx-auto col-span-4 justify-center  ' onClick={onClickLogin}>
+            <PrimaryButton
+              className='col-start-2 mx-auto col-span-4 justify-center  '
+              onClick={onClickLogin}
+            >
               Sign up!
             </PrimaryButton>
             <i className='pt-4 col-start-2 col-span-4 text-center '>
@@ -108,11 +105,16 @@ export const About: VFC = memo(() => {
               </div>
             </div>
           </section>
-          <section className='bg-gray-100 h-56 flex items-center '>
-            <div className='container flex justify-center mb-8'>
-              <PrimaryButton onClick={onClickLogin}>Dive into the Shadow chat</PrimaryButton>
+          <div className='bg-gray-100 h-56'>
+            <div className='grid grid-cols-6'>
+              <PrimaryButton
+                className='col-span-4 col-start-2 mx-auto my-20'
+                onClick={onClickLogin}
+              >
+                Dive into the Shadow chat
+              </PrimaryButton>
             </div>
-          </section>
+          </div>
         </>
       )}
     </>

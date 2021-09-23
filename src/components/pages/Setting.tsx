@@ -1,4 +1,5 @@
 import { VFC, memo } from 'react'
+import { PrimaryToggle } from '../atoms/button/PrimaryToggle'
 
 export const Setting: VFC = memo(() => {
   return (
@@ -16,110 +17,21 @@ export const Setting: VFC = memo(() => {
                 </tr>
               </thead>
               <tbody className='text-sm font-normal text-gray-700'>
-                <tr className='hover:bg-gray-100 border-b border-gray-200 py-10'>
+                <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Dark Mode</td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr className='hover:bg-gray-100 border-b border-gray-200 py-4'>
-                  <td className='px-4 py-4 flex items-center'>
-                    A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact
-                    on Design
-                  </td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
+                  <PrimaryToggle />
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
-                  <td className='px-4 py-4'>Intro to JavaScript</td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
+                  <td className='px-4 py-4'>Sound</td>
+                  <PrimaryToggle />
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
-                  <td className='px-4 py-4'>Intro to JavaScript</td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
+                  <td className='px-4 py-4'>Change Font</td>
+                  <PrimaryToggle />
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
-                  <td className='px-4 py-4'>Intro to JavaScript</td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
-                </tr>
-                <tr className='hover:bg-gray-100 border-b border-gray-200'>
-                  <td className='px-4 py-4'>Intro to JavaScript</td>
-                  <td className='px-4 py-4'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-5 w-5'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fill-rule='evenodd'
-                        d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
-                        clip-rule='evenodd'
-                      />
-                    </svg>
-                  </td>
+                  <td className='px-4 py-4'>Reduce graphical motion to save evergy</td>
+                  <PrimaryToggle />
                 </tr>
               </tbody>
             </table>
