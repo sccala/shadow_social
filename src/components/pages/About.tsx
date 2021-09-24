@@ -17,7 +17,7 @@ export const About: VFC = memo(() => {
           <div
             className='contenair py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
             style={{
-              backgroundImage: 'url( /asset/images/abouthero.jpg )',
+              backgroundImage: 'url( /asset/images/abouthero.png )',
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -37,7 +37,7 @@ export const About: VFC = memo(() => {
             >
               Sign up!
             </PrimaryButton>
-            <i className='pt-4 col-start-2 col-span-4 text-center '>
+            <a href='#about' className='pt-4 col-start-2 col-span-4 text-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='mx-auto h-16 w-16 animate-bounce'
@@ -52,10 +52,10 @@ export const About: VFC = memo(() => {
                   d='M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z'
                 />
               </svg>
-            </i>
+            </a>
           </div>
 
-          <section className='mt-44'>
+          <section id='about' className='mt-44'>
             <div
               className='max-w-4xl 
         mx-auto mt-8  mb-32 px-4 grid items-center md:grid-cols-2  

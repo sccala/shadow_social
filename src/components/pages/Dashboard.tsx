@@ -1,9 +1,15 @@
 import { VFC, memo } from 'react'
+import { AddComment } from '../atoms/button/AddComment'
+import { ChatCard } from '../atoms/Chat/ChatCard'
 
 export const DashboardChat: VFC = memo(() => {
+  const addComment = () => {
+  alert('addcomment')
+}
   return (
     <>
-      <div className='container'>this is the actual chat section.</div>
+      <ChatCard />
+      <AddComment onClick={addComment} />
     </>
   )
 })

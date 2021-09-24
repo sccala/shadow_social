@@ -1,10 +1,10 @@
 import { VFC, memo } from 'react'
-import { PrimaryToggle } from '../atoms/button/PrimaryToggle'
+import { DarkModeToggle, ChangeFontToggle } from '../atoms/button/Toggles'
 
 export const Setting: VFC = memo(() => {
   return (
     <>
-      <div className='container'>
+      <div className='container mx-auto'>
         {/* setting  */}
         <div className='bg-white pb-4 px-4 rounded-md w-full'>
           <div className='flex justify-between w-full pt-6 '></div>
@@ -19,19 +19,19 @@ export const Setting: VFC = memo(() => {
               <tbody className='text-sm font-normal text-gray-700'>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Dark Mode</td>
-                  <PrimaryToggle />
-                </tr>
-                <tr className='hover:bg-gray-100 border-b border-gray-200'>
-                  <td className='px-4 py-4'>Sound</td>
-                  <PrimaryToggle />
+                  <DarkModeToggle />
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Change Font</td>
-                  <PrimaryToggle />
+                  <ChangeFontToggle />
+                </tr>
+                <tr className='hover:bg-gray-100 border-b border-gray-200'>
+                  <td className='px-4 py-4'>Sound</td>
+                  <td className='px-4 py-4'>Coming Soon</td>
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Reduce graphical motion to save evergy</td>
-                  <PrimaryToggle />
+                  <td className='px-4 py-4'>Coming Soon</td>
                 </tr>
               </tbody>
             </table>
