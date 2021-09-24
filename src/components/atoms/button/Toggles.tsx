@@ -1,7 +1,9 @@
 import { VFC, memo } from 'react'
 import { useDarkmode, useChangeFont } from '../../../hooks/useToggle'
 
-type Props = {}
+type Props = {
+  className?: string
+}
 
 export const DarkModeToggle: VFC<Props> = memo(() => {
   const { darkmode, setDarkmode } = useDarkmode()

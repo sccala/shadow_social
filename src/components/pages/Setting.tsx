@@ -13,17 +13,21 @@ export const Setting: VFC = memo(() => {
               <thead>
                 <tr className='rounded-lg text-sm font-medium text-gray-700 text-left'>
                   <th className='px-4 py-2 bg-gray-200'>Setting</th>
-                  <th className='px-4 py-2 bg-gray-200'>On/Off</th>
+                  <th className='px-4 py-2 bg-gray-200'>ON / OFF</th>
                 </tr>
               </thead>
               <tbody className='text-sm font-normal text-gray-700'>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Dark Mode</td>
-                  <DarkModeToggle />
+                  <td className='px-4 py-4'>
+                    <DarkModeToggle />
+                  </td>
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Change Font</td>
-                  <ChangeFontToggle />
+                  <td className='px-4 py-4'>
+                    <ChangeFontToggle />
+                  </td>
                 </tr>
                 <tr className='hover:bg-gray-100 border-b border-gray-200'>
                   <td className='px-4 py-4'>Sound</td>
