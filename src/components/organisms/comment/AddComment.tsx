@@ -1,10 +1,12 @@
 import { VFC, memo, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
+// import { CSSTransition } from 'react-transition-group'
 
 type Props = {
   onClick?: () => void
   className?: string
 }
+
 
 export const AddComment: VFC<Props> = memo(props => {
   const [showAddComment, setShowAddComment] = useState(false)
@@ -50,22 +52,33 @@ export const AddComment: VFC<Props> = memo(props => {
               <p className='text-xs text-gray-600'>@joe.blow</p>
             </div>
           </div>
-          <div className='w-full mb-4'>
-            <TextareaAutosize style={{ boxSizing: 'border-box' }} minRows={3}>
-              <input
-                className='text-sm'
-                value={newComment}
-                onChange={onChangeTodoText}
-                placeholder='whisper here'
-                maxLength={140}
-                type='textarea'
-                style={{ width:'29em' }}
-              ></input>
-            </TextareaAutosize>
+          {/* <CSSTransition
+            in={showAddComment}
+            timeout={400}
+            classNames='list-transition'
+            unmountOnExit
+            appear
+            enter={false}
+            onEnter={() => {
+              console.log('FIRED!')
+            }}
+          > */}
+          <div className='mb-4'>
+            <TextareaAutosize
+              style={{ boxSizing: 'border-box' }}
+              minRows={2}
+              placeholder='whisper here'
+              className='text-sm w-full'
+              value={newComment}
+              onChange={onChangeTodoText}
+              maxLength={280} 
+              
+            />
           </div>
           <div className='w-full'>
             <p className='text-xs text-gray-500 text-right'>Oct 15th 8:33pm</p>
           </div>
+          {/* </CSSTransition> */}
         </div>
       ) : null}
     </>

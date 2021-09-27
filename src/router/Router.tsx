@@ -7,6 +7,7 @@ import { FooterLayout } from '../components/template/FooterLayout'
 import { HeaderLayout } from '../components/template/HeaderLayout'
 import { homeRoutes } from './HomeRoutes'
 
+
 export const Router: VFC = memo(() => {
   return (
     <Switch>
