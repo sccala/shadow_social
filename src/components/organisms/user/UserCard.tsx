@@ -3,7 +3,7 @@ import { VFC, memo } from 'react'
 type Props = {
   userName: string
   imageUrl: string
-  userId: string
+  userId: number
   onClick?: () => void
 }
 

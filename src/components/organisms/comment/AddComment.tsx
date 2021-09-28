@@ -8,7 +8,6 @@ type Props = {
   className?: string
 }
 
-
 export const AddComment: VFC<Props> = memo(props => {
   const [showAddComment, setShowAddComment] = useState(false)
   const [newComment, setNewComment] = useState()
@@ -21,7 +20,7 @@ export const AddComment: VFC<Props> = memo(props => {
 
   return (
     <>
-      <div className=''>
+      <div style={{ maxWidth: '400px' }}>
         {/* Plus icon button */}
         <button type='submit' onClick={showNewComment} className='my-4'>
           <svg
@@ -41,51 +40,46 @@ export const AddComment: VFC<Props> = memo(props => {
         </button>
       </div>
       {/* new commet input */}
-      <div className=''>
-        {showAddComment ? (
-          <div
-            className='rounded-lg bg-white shadow p-5 text-gray-800'
-            style={{ maxWidth: '400px' }}
-          >
-            <div className='w-full flex mb-4'>
-              <div className='overflow-hidden rounded-full w-12 h-12'>
-                <img src='https://uifaces.co/our-content/donated/1H_7AxP0.jpg' alt='logo' />
-              </div>
-              <div className='flex-grow pl-3'>
-                <h6 className='font-bold text-md'>Joe Blow</h6>
-                <p className='text-xs text-gray-600'>@joe.blow</p>
-              </div>
+
+      {showAddComment ? (
+        <div
+          className='rounded-lg bg-white shadow p-5 text-gray-800'
+          style={{ maxWidth: '400px', maxHeight: '360px' }}
+        >
+          <div className='w-full flex mb-4'>
+            <div className='overflow-hidden rounded-full w-12 h-12'>
+              <img src='https://uifaces.co/our-content/donated/1H_7AxP0.jpg' alt='logo' />
             </div>
-            {/* <CSSTransition
-            in={showAddComment}
-            timeout={400}
-            classNames='list-transition'
-            unmountOnExit
-            appear
-            enter={false}
-            onEnter={() => {
-              console.log('FIRED!')
-            }}
-          > */}
-            <div className='mb-4'>
-              <TextareaAutosize
-                style={{ boxSizing: 'border-box' }}
-                minRows={4}
-                placeholder='whisper here'
-                className='text-sm w-full bg-gray-100 rounded border border-indigo-400 placeholder-indigo-400 leading-normal resize-none h-20 py-2 px-3 focus:outline-none focus:bg-white'
-                value={newComment}
-                onChange={onChangeTodoText}
-                maxLength={280}
-              />
+            <div className='flex-grow pl-3'>
+              <h6 className='font-bold text-md'>Joe Blow</h6>
+              <p className='text-xs text-gray-600'>@joe.blow</p>
             </div>
-            <div className='w-full'>
-              <p className='text-xs text-gray-500 text-right'>Oct 15th 8:33pm</p>
-            </div>
-            <SecondaryButton onClick={onClickSubmit}>Submit</SecondaryButton>
-            {/* </CSSTransition> */}
           </div>
-        ) : null}
-      </div>
+
+          <div className='mb-4'>
+            <TextareaAutosize
+              style={{ boxSizing: 'border-box', maxWidth: '400px' }}
+              minRows={4}
+              placeholder='whisper here'
+              className='text-sm w-full bg-gray-100 rounded border border-indigo-400 placeholder-indigo-400 leading-normal resize-none h-20 py-2 px-3 focus:outline-none focus:bg-white'
+              value={newComment}
+              onChange={onChangeTodoText}
+              maxLength={280}
+            />
+          </div>
+          <div className='w-full'>
+            <p className='text-xs text-gray-500 text-right'>Oct 15th 8:33pm</p>
+            <div className='grid grid-cols-6'>
+              <SecondaryButton
+                className='col-span-2 col-start-2 mx-auto my-4'
+                onClick={onClickSubmit}
+              >
+                Submit
+              </SecondaryButton>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   )
 })
