@@ -9,20 +9,24 @@ export const DashboardChat: VFC = memo(() => {
   return (
     <>
       <div className='container px-5 mx-auto'>
-        <p className='my-8 mx-auto text-indigo-600 text-md w-full'>What's happening?</p>
-        <div className='grid grid-cols-2 mb-16 md:grid-cols-2 lg:grid-cols-3 sm:px-6 md:px-16'>
+        <div className='flex'>
+          <p className='my-8 grid-cols-6 text-indigo-600 text-lg w-full'>
+            What's happening?
+          </p>
+        </div>
+        <div className='grid grid-cols-2 gap-4 mb-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:px-6 md:px-16'>
           {users.map(user => (
             <ChatCard
               key={user.id}
               userName={user.username}
               imageUrl='https://source.unsplash.com/random'
-              userId={user.id}
+              fullName={user.name}
               className='grid-span-2 grid-cols-6'
             />
           ))}
         </div>
+        <AddComment className='flex justify-center items-center' />
       </div>
-      <AddComment className='' />
     </>
   )
 })

@@ -122,10 +122,10 @@ export const Header: VFC = memo(() => {
             Setting
           </div>
           <div
-            onClick={onClickSetting}
+            onClick={onClickAbout}
             className='text-center block text-base hover:text-gray-900 mb-1 pb-4'
           >
-            Third Link
+           About
           </div>
         </div>
       </div>
