@@ -7,12 +7,12 @@ type Props = {
   className?: string
 }
 
-export const PrimaryButton: VFC<Props> = memo(props => {
+export const SecondaryButton: VFC<Props> = memo(props => {
   const { children, disabled = false, onClick, className } = props
 
   return (
     <button
-      className={`${className} m-3 py-3 text-md w-64  text-white bg-indigo-500 rounded-2xl hover:bg-indigo-700 not-sr-only bg-violet-500`}
+      className={`${className} m-3 py-2 w-64 text-sm text-white bg-indigo-500 rounded-2xl hover:bg-indigo-700 not-sr-only bg-violet-500`}
       disabled={disabled}
       onClick={onClick}
     >

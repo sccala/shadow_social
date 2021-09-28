@@ -15,7 +15,7 @@ export const About: VFC = memo(() => {
       ) : (
         <>
           <div
-            className='contenair py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
+            className=' py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
             style={{
               backgroundImage: 'url( /asset/images/abouthero.png )',
               backgroundPosition: 'center',
