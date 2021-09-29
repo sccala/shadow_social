@@ -9,8 +9,9 @@ export const DashboardChat: VFC = memo(() => {
   return (
     <>
       <div className='container px-5 mx-auto'>
-        <div className='flex justify-center items-center'>
-          <div className='my-8  text-indigo-600 text-lg'>What's happening?</div>
+        <div className='justify-center items-center sticky my-8 flex'>
+          <div className=' text-indigo-600 text-lg'>What's happening?</div>
+          <AddComment className=' ' />
         </div>
         <div className='grid grid-cols-2 gap-4 mb-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:px-6 md:px-16'>
           {users.map(user => (
@@ -23,7 +24,6 @@ export const DashboardChat: VFC = memo(() => {
             />
           ))}
         </div>
-        <AddComment className='flex justify-center items-center' />
       </div>
     </>
   )
