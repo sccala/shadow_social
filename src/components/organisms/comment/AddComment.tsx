@@ -18,14 +18,15 @@ export const AddComment: VFC<Props> = memo(props => {
   const showNewComment = () => setShowAddComment(!showAddComment)
   const onClickSubmit = () => alert('submitted')
 
+  
   return (
     <>
-      <div style={{ maxWidth: '400px' }}>
+      <div style={{ maxWidth: '400px' }} className='px-auto'>
         {/* Plus icon button */}
         <button type='submit' onClick={showNewComment} className='my-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-12 w-12 text-indigo-500 hover:text-indigo-900 hover:animate-spin'
+            className='h-10 w-10 text-indigo-500 hover:text-indigo-900 focus:text-indigo-900'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -33,7 +34,7 @@ export const AddComment: VFC<Props> = memo(props => {
             <path
               stroke-linecap='round'
               stroke-linejoin='round'
-              stroke-width='1.5'
+              stroke-width='1'
               d='M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z'
             />
           </svg>
@@ -68,7 +69,7 @@ export const AddComment: VFC<Props> = memo(props => {
             />
           </div>
           <div className='w-full'>
-            <p className='text-xs text-gray-500 text-right'>Oct 15th 8:33pm</p>
+            <p className='text-xs text-gray-500 text-right'>Current: Time</p>
             <div className='grid grid-cols-6'>
               <SecondaryButton
                 className='col-span-2 col-start-2 mx-auto my-4'

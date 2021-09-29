@@ -10,8 +10,8 @@ export const Header: VFC = memo(() => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <header className='text-gray-600 body-font bg-gray-50'>
-      <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center'>
+    <header className='text-gray-600 body-font bg-gray-50 '>
+      <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center sticky'>
         <div
           className='flex font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
           onClick={onClickHome}
@@ -66,7 +66,7 @@ export const Header: VFC = memo(() => {
         </button>
       </div>
       {/* mobile navbar */}
-      <div className='cursor-pointer'>
+      <div className='cursor-pointer sticky'>
         <div className='flex justify-between md:hidden px-8 py-4'>
           <div className='flex'>
             <svg
@@ -125,7 +125,7 @@ export const Header: VFC = memo(() => {
             onClick={onClickAbout}
             className='text-center block text-base hover:text-gray-900 mb-1 pb-4'
           >
-           About
+            About
           </div>
         </div>
       </div>
