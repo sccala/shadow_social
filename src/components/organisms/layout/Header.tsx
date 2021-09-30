@@ -3,7 +3,8 @@ import { useHistory } from 'react-router'
 
 export const Header: VFC = memo(() => {
   const history = useHistory()
-  const onClickHome = useCallback(() => history.push('/home/chat'), [history])
+  const onClickHome = useCallback(() => history.push('/home'), [history])
+   const onClickChat = useCallback(() => history.push('/home/chat'), [history])
   const onClickUserManagement = useCallback(() => history.push('/home/user_management'), [history])
   const onClickSetting = useCallback(() => history.push('/home/setting'), [history])
   const onClickAbout=useCallback(()=>history.push('/home/about'),[history])
@@ -14,29 +15,33 @@ export const Header: VFC = memo(() => {
       <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center sticky'>
         <div
           className='flex font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
-          onClick={onClickHome}
+          onClick={onClickChat}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
+            className='w-10 h-10 text-white p-2 bg-indigo-500 rounded-full'
             fill='none'
-            stroke='currentColor'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='2'
-            className='w-10 h-10 text-white p-2 bg-indigo-500 rounded-full cursor-pointer'
             viewBox='0 0 24 24'
-            onClick={onClickHome}
+            stroke='currentColor'
           >
-            <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
+            />
           </svg>
 
-          <span className='ml-3 text-xl cursor-pointer' onClick={onClickHome}>
+          <span className='ml-3 text-xl cursor-pointer' onClick={onClickChat}>
             Shadow Chat
           </span>
         </div>
         <nav className='sm:ml-auto flex flex-wrap items-center text-base justify-center cursor-pointer'>
+          <div onClick={onClickHome} className='mr-5 hover:text-gray-900'>
+            Home
+          </div>
           <div onClick={onClickUserManagement} className='mr-5 hover:text-gray-900'>
-            User All
+            Users
           </div>
           <div onClick={onClickSetting} className='mr-5 hover:text-gray-900'>
             Setting

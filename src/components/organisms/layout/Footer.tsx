@@ -21,62 +21,63 @@ export const Footer: VFC = memo(() => {
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   stroke-width='2'
-                  d='M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z'
+                  d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
                 />
               </svg>
-              <span className='ml-3 text-xl text-white'>DEV</span>
+              
+              <span className='ml-3 text-xl text-white'>Shadow Chat</span>
             </a>
             <p className='mt-2 text-sm text-white'>
-              Air plant banjo lyft occupy retro adaptogen indego
+              A social media for people who want to whisper small things like this and that.
             </p>
           </div>
           <div className='flex-grow flex flex-wrap justify-end md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center'>
             <div className='lg:w-1/4 md:w-1/2 w-full px-4'>
-              <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
+              <h2 className='text-base text-white  text-md mb-3'>Sitemap</h2>
               <nav className='list-none mb-10 text-white text-sm hover:text-indigo-300'>
                 <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    First Link
+                  <a className='text-white hover:text-indigo-300' href='/home/chat'>
+                   Home
+                  </a>
+                </li>
+                <li>
+                  <a className='text-white hover:text-indigo-300' href='/home/chat'>
+                    Chat Feed
                   </a>
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    Second Link
+                    Users
                   </a>
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className='text-white hover:text-indigo-300' href='/home'>
-                    Fourth Link
+                    Setting
                   </a>
                 </li>
               </nav>
             </div>
             <div className=' lg:w-1/4 md:w-1/2 w-full px-4'>
-              <h2 className='text-base text-white tracking-widest text-md mb-3'>Categories</h2>
+              <h2 className='text-base text-white  text-md mb-3'>Categories</h2>
               <nav className='list-none mb-10 text-sm text-white hover:text-indigo-300'>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    First Link
+                    About
                   </a>
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    Second Link
+                   Developer
                   </a>
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    Third Link
+                    Terms
                   </a>
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                    Fourth Link
+                   Privacy Policies
                   </a>
                 </li>
               </nav>
@@ -93,7 +94,7 @@ export const Footer: VFC = memo(() => {
                 className='text-gray-400 ml-1'
                 target='_blank'
               >
-                @Developer
+                @github/sccala
               </a>
             </p>
             <span className='inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start'>
