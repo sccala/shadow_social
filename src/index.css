@@ -35,3 +35,21 @@ color: transparent;
 background-color: #5a564c;
 transition: all 400ms;
 }
+
+.fade-appear{
+    opacity:0;
+    z-index:1
+}
+.fade-appear.fade-appear-active{
+    opacity:1;
+    transition: opacity 300ms linear
+}
+
+.fade-enter{
+    opacity:0;
+    z-index:1
+}
+.fade-enter.fade-appear-active{
+    opacity:0;
+    z-index:1
+}

@@ -1,6 +1,7 @@
 import { VFC, memo, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
 import { SecondaryButton } from '../../atoms/button/SecondaryButton'
+import '../../../index.css'
 import { CSSTransition } from 'react-transition-group'
 
 type Props = {
@@ -9,20 +10,20 @@ type Props = {
 }
 
 export const AddComment: VFC<Props> = memo(props => {
-  
   const [showAddComment, setShowAddComment] = useState(false)
   const [newComment, setNewComment] = useState()
-
-
 
   const onChangeTodoText = event => {
     setNewComment(event.target.value)
   }
   const showNewComment = () => setShowAddComment(!showAddComment)
 
-  const onClickSubmit = () => alert('submitted')
+  const onClickSubmit = () => {
+    alert('Are you sure to send?')
+    setShowAddComment(!showAddComment)
 
-  
+  }
+
   return (
     <>
       <div style={{ maxWidth: '400px' }} className='px-auto'>
@@ -47,16 +48,12 @@ export const AddComment: VFC<Props> = memo(props => {
       {/* new commet input */}
 
       {showAddComment ? (
-        <CSSTransition
-          timeout={300}
-          in={showAddComment}
-          classNames='list-transition-enter'
-          unmountOnExit
-          onEnter={() => showNewComment()}
-          onExited={() => showNewComment()}
-        >
+        <CSSTransition timeout={300} in={showNewComment} classNames='fade' appear>
           <div
-            className='rounded-lg bg-white shadow p-5 text-gray-800'
+            className='rounded-lg bg-white shadow p-5 text-gray-800 
+          transition-transform 
+          duration-300 
+          ease-in-out'
             style={{ maxWidth: '400px', maxHeight: '360px' }}
           >
             <div className='w-full flex mb-4'>
@@ -91,7 +88,7 @@ export const AddComment: VFC<Props> = memo(props => {
                 </SecondaryButton>
               </div>
             </div>
-          </div>{' '}
+          </div>
         </CSSTransition>
       ) : null}
     </>
