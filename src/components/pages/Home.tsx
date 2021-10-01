@@ -18,7 +18,7 @@ export const Home: VFC = memo(() => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <h2 className='col-start-2 col-span-4 md:text-5xl text-4xl xl:text-6xl leading-tight'>
+        <h2 className='col-start-2 col-span-4 md:text-3xl text-3xl xl:text-4xl leading-tight'>
           Welcome to the Shadow Chat.
         </h2>
         <p className='col-start-2 col-span-4 md:text-md'>
@@ -65,7 +65,7 @@ export const Home: VFC = memo(() => {
             />
           </div>
           <div>
-            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-4xl text-center md:text-left md:flex'>
+            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl text-center md:text-left md:flex'>
               Where hanging out is easy
             </h2>
             <p className='mt-4 text-gray-500 text-center md:text-left md:flex '>
@@ -83,7 +83,7 @@ export const Home: VFC = memo(() => {
         lg:max-w-7xl lg:grid-cols-2 gap-8 sm:gap-6 lg:gap-6'
         >
           <div>
-            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-4xl text-center md:text-left md:flex'>
+            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-2xl text-center md:text-left md:flex'>
               From few to a fandom
             </h2>
             <p className='mt-4 text-gray-500 text-center md:text-left md:flex '>

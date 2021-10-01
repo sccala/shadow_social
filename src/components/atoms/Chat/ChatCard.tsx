@@ -20,7 +20,7 @@ export const ChatCard: VFC<Props> = memo(props => {
   return (
     <>
       <div
-        className='rounded-lg bg-white shadow p-5 text-gray-800 mx-auto '
+        className='rounded-lg bg-white shadow p-5 text-gray-800'
         style={{ maxWidth: '400px' }}
       >
         <div className='flex mb-4'>
