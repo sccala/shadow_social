@@ -1,47 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 ::selection {
   background: #6366F1;
   color: white;
 }
 
+ :root {
+  @apply light;
+} 
 
-/* This fires as soon as the element enters the DOM*/
-.list-transition-enter {
-/*We give the list the initial dimension of the list button*/
-top: 0;
-width: 120px;
-max-height: 40px;
-color: transparent;
-background-color: #5a564c;
-}
-/* This is where we can add the transition*/
-.list-transition-enter-active {
-top: 45px;
-width: 200px;
-max-height: 200px;
-background-color: #9e8949;
-transition: all 400ms;
-}
-/* This fires as soon as the this.state.showList is false */
-.list-transition-exit {
-top: 45px;
-width: 200px;
-max-height: 200px;
-background-color: #9e8949;
-}
-/* fires as element leaves the DOM*/
-.list-transition-exit-active {
-top: 0;
-width: 120px;
-max-height: 40px;
-color: transparent;
-background-color: #5a564c;
-transition: all 400ms;
+.dark {
+  --color-bg-primary: #1F2937;
+  --color-bg-secondary: #4B5563;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #A5B4FC;
 }
 
+.light {
+  --color-bg-primary: #F3F4F6;
+  --color-bg-secondary: #C7D2FE;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #9CA3AF;
+  --color-text-accent: #4F46E5;
+}
+
+
+
+/* Transitions */
 .fade-appear{
     opacity:0;
     z-index:1
@@ -61,3 +45,8 @@ transition: all 400ms;
   opacity: 0;
   transition: transform 500ms ease-in, opacity 300ms ease-out;
 }
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

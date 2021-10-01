@@ -48,11 +48,14 @@ export const AddComment: VFC<Props> = memo(props => {
       {/* new commet input */}
 
       {showAddComment ? (
-        <CSSTransition 
-        timeout={300} 
-        in={showNewComment} 
-        classNames='fade' appear 
-        exit>
+        <CSSTransition
+          timeout={600}
+          in={showNewComment}
+          classNames='fade'
+          unmountOnExit
+          appear
+          
+        >
           <div
             className='rounded-lg bg-white shadow p-5 text-gray-800 
           transition-transform 

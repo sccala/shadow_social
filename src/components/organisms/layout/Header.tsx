@@ -53,7 +53,7 @@ export const Header: VFC = memo(() => {
         <button className='items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
           Logout
         </button>
-        <button className='items-center  border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
+        <button className='items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-6 w-6 hover:animate-spin'

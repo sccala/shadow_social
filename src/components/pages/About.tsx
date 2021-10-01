@@ -6,7 +6,6 @@ export const About: VFC = memo(() => {
   const onClickLogin = () => {
     window.location.href = '/home/chat'
   }
-  
 
   return (
     <>
@@ -19,7 +18,7 @@ export const About: VFC = memo(() => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <h2 className='col-start-2 col-span-4 md:text-5xl text-4xl xl:text-6xl leading-tight'>
+        <h2 className='col-start-2 col-span-4 md:text-3xl text-3xl xl:text-4xl leading-tight'>
           Welcome to the Shadow Chat.
         </h2>
         <p className='col-start-2 col-span-4 md:text-md'>
@@ -66,10 +65,10 @@ export const About: VFC = memo(() => {
             />
           </div>
           <div>
-            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-4xl text-center md:text-left md:flex'>
+            <h2 className='text-2xl font-medium tracking-tight text-primary sm:text-2xl text-center md:text-left md:flex'>
               Where hanging out is easy
             </h2>
-            <p className='mt-4 text-gray-500 text-center md:text-left md:flex '>
+            <p className='mt-4 text-primary text-center md:text-left md:flex '>
               Grab a seat in a voice channel when you’re free. Friends in your server can see you’re
               around and instantly pop in to talk without having to call.
             </p>
@@ -84,10 +83,10 @@ export const About: VFC = memo(() => {
         lg:max-w-7xl lg:grid-cols-2 gap-8 sm:gap-6 lg:gap-6'
         >
           <div>
-            <h2 className='text-2xl font-medium tracking-tight text-gray-900 sm:text-4xl text-center md:text-left md:flex'>
+            <h2 className='text-2xl font-medium tracking-tight text-primary sm:text-2xl text-center md:text-left md:flex'>
               From few to a fandom
             </h2>
-            <p className='mt-4 text-gray-500 text-center md:text-left md:flex '>
+            <p className='mt-4 text-primary text-center md:text-left md:flex '>
               Get any community running with moderation tools and custom member access. Give members
               special powers, set up private channels, and more.
             </p>
@@ -101,7 +100,7 @@ export const About: VFC = memo(() => {
           </div>
         </div>
       </section>
-      <div className='bg-gray-100 h-56'>
+      <div className='bg-primary h-56'>
         <div className='grid grid-cols-6'>
           <PrimaryButton className='col-span-4 col-start-2 mx-auto my-20' onClick={onClickLogin}>
             Dive into the Shadow chat
