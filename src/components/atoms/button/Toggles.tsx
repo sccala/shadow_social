@@ -1,15 +1,16 @@
 import { VFC, memo, useContext } from 'react'
 import {  useChangeFont } from '../../../hooks/useToggle'
+import { ThemeContext } from '../../../context/themeContext'
 
 type Props = {
   className?: string
 }
 
 export const DarkModeToggle: VFC<Props> = memo(() => {
-  const { theme, changeTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
 
   // const { darkmode, setDarkmode } = useDarkmode()
-  const onClickToggle = () => changeTheme(v => !v)
+  const onClickToggle = () => setTheme(theme)
   return (
     <div onClick={onClickToggle} className='flex flex-col'>
       <label htmlFor='unchecked' className='mt-3 inline-flex items-center cursor-pointer'>

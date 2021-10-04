@@ -23,7 +23,7 @@ const getInitialTheme = () => {
   return 'light'
 }
 
-const ThemeContext = createContext<ThemeContextType>(null)
+ export const ThemeContext = createContext<ThemeContextType>(null)
 
 export const ThemeProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = useState(getInitialTheme)
