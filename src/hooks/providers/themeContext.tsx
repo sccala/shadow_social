@@ -4,6 +4,7 @@ type ThemeName = 'light' | 'dark' | string
 type ThemeContextType = {
   theme: ThemeName
   setTheme: (name: ThemeName) => void
+
 }
 
 const getInitialTheme = () => {
@@ -23,19 +24,19 @@ const getInitialTheme = () => {
   return 'light'
 }
 
- export const ThemeContext = createContext<ThemeContextType>(null)
+export const ThemeContext = createContext<ThemeContextType>({} as ThemeContextType)
 
 export const ThemeProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = useState(getInitialTheme)
 
-  const rawSetTheme = rawTheme => {
+  const rawSetTheme = theme => {
     const root = window.document.documentElement
     const isDark = theme === 'dark'
 
     root.classList.remove(isDark ? 'light' : 'dark')
-    root.classList.add(rawTheme)
+    root.classList.add(theme)
 
-    localStorage.setItem('color-theme', rawTheme)
+    localStorage.setItem('color-theme', theme)
   }
 
   if (initialTheme) {

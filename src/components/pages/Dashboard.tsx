@@ -9,7 +9,7 @@ export const DashboardChat: VFC = memo(() => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='items-center flex flex-col justify-center my-8 '>
+        <div className='items-center flex flex-col justify-center my-8'>
           <div className=' text-indigo-600 text-lg'>What's happening?</div>
           <AddComment />
         </div>

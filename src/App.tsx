@@ -1,12 +1,12 @@
-import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './hooks/providers/themeContext'
 
 import { Router } from './router/Router'
 
-
 export default function App() {
   return (
-    <BrowserRouter>
+    <ThemeProvider initialTheme>
       <Router />
-    </BrowserRouter>
+    </ThemeProvider>
   )
 }
