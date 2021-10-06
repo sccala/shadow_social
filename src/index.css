@@ -9,15 +9,17 @@
 
 .dark {
   --color-bg-primary: #29374b;
-  --color-bg-secondary: #4B5563;
+  --color-bg-secondary: #4b4b63;
+  --color-bg-tertiary: #6461af;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
   --color-text-accent: #A5B4FC;
 }
 
 .light {
-  --color-bg-primary: #F3F4F6;
+  --color-bg-primary: #fcfcfc;
   --color-bg-secondary: #C7D2FE;
+  --color-bg-tertiary: #9692df;
   --color-text-primary: #1F2937;
   --color-text-secondary: #9CA3AF;
   --color-text-accent: #4F46E5;
@@ -50,3 +52,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;

@@ -8,9 +8,9 @@ export const About: VFC = memo(() => {
   }
 
   return (
-    <>
+    <div className='bg-primary'>
       <div
-        className=' py-32 bg-cover h-screen w-screen  justify-center items-center text-white text-center grid grid-cols-6'
+        className=' py-32 bg-cover h-screen w-screen justify-center items-center text-primary text-center grid grid-cols-6'
         style={{
           backgroundImage: 'url( /asset/images/abouthero.png )',
           backgroundPosition: 'center',
@@ -18,7 +18,7 @@ export const About: VFC = memo(() => {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <h2 className='col-start-2 col-span-4 md:text-3xl text-3xl xl:text-4xl leading-tight'>
+        <h2 className='col-start-2 col-span-4 md:text-3xl text-3xl xl:text-4xl leading-tight '>
           Welcome to the Shadow Chat.
         </h2>
         <p className='col-start-2 col-span-4 md:text-md'>
@@ -95,18 +95,18 @@ export const About: VFC = memo(() => {
             <img
               src='/asset/images/fandom.jpg'
               alt='shadow on eyes'
-              className='bg-gray-100 content-center rounded-lg'
+              className=' content-center rounded-lg'
             />
           </div>
         </div>
       </section>
-      <div className='bg-primary h-56'>
+      <div className='bg-secondary h-56'>
         <div className='grid grid-cols-6'>
           <PrimaryButton className='col-span-4 col-start-2 mx-auto my-20' onClick={onClickLogin}>
             Dive into the Shadow chat
           </PrimaryButton>
         </div>
       </div>
-    </>
+    </div>
   )
 })
