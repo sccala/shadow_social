@@ -1,5 +1,5 @@
 ::selection {
-  background: #ff7700;
+  background: #ec005b;
   color: white;
 }
 
@@ -8,7 +8,7 @@
 } 
 
 .dark {
-  --color-bg-primary: #1F2937;
+  --color-bg-primary: #29374b;
   --color-bg-secondary: #4B5563;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;

@@ -11,10 +11,10 @@ export const Header: VFC = memo(() => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <header className='text-gray-600 body-font bg-gray-50 '>
+    <header className='text-gray-600 body-font bg-gray-100 dark:bg-indigo-900'>
       <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center sticky'>
         <div
-          className='flex font-medium items-center text-gray-900  md:sm-0 cursor-pointer'
+          className='flex font-medium items-center text-primary  md:sm-0 cursor-pointer'
           onClick={onClickChat}
         >
           <svg
@@ -32,21 +32,21 @@ export const Header: VFC = memo(() => {
             />
           </svg>
 
-          <span className='ml-3 text-xl cursor-pointer' onClick={onClickChat}>
+          <span className='ml-3 text-xl text-primary cursor-pointer' onClick={onClickChat}>
             Shadow Chat
           </span>
         </div>
         <nav className='sm:ml-auto flex flex-wrap items-center text-base justify-center cursor-pointer'>
-          <div onClick={onClickHome} className='mr-5 hover:text-gray-900'>
+          <div onClick={onClickHome} className='mr-5 text-primary hover:text-secondary'>
             Home
           </div>
-          <div onClick={onClickUserManagement} className='mr-5 hover:text-gray-900'>
+          <div onClick={onClickUserManagement} className='mr-5 text-primary hover:text-secondary'>
             Users
           </div>
-          <div onClick={onClickSetting} className='mr-5 hover:text-gray-900'>
+          <div onClick={onClickSetting} className='mr-5 text-primary hover:text-secondary'>
             Setting
           </div>
-          <div onClick={onClickAbout} className='mr-5'>
+          <div onClick={onClickAbout} className='mr-5 text-primary hover:text-secondary'>
             About
           </div>
         </nav>
@@ -56,7 +56,7 @@ export const Header: VFC = memo(() => {
         <button className='items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 hover:animate-spin'
+            className='w-6 h-6 '
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -76,23 +76,25 @@ export const Header: VFC = memo(() => {
           <div className='flex'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
+              className='w-8 h-8 text-white py-2 bg-indigo-500 rounded-full'
               fill='none'
-              stroke='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              className='w-8 h-8 text-white p-2 bg-indigo-500 rounded-full flex self-center'
               viewBox='0 0 24 24'
-              onClick={onClickHome}
+              stroke='currentColor'
             >
-              <path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'></path>
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
+                onClick={onClickHome}
+              />
             </svg>
 
             <span
               className='ml-3 font-medium items-center text-gray-900  cursor-pointer'
               onClick={onClickHome}
             >
-              Chat App
+              Shadow Chat
             </span>
           </div>
           <button onClick={() => setNavbarOpen(!navbarOpen)}>
@@ -115,10 +117,16 @@ export const Header: VFC = memo(() => {
         {/* collapsable navbar */}
         <div className={'md:hidden' + (navbarOpen ? ' block' : ' hidden')}>
           <div
+            onClick={onClickHome}
+            className='text-center block text-base  hover:text-gray-900 mb-1'
+          >
+            Home
+          </div>
+          <div
             onClick={onClickUserManagement}
             className='text-center block text-base hover:text-gray-900 mb-1'
           >
-            User All
+            Users
           </div>
           <div
             onClick={onClickSetting}
@@ -128,7 +136,7 @@ export const Header: VFC = memo(() => {
           </div>
           <div
             onClick={onClickAbout}
-            className='text-center block text-base hover:text-gray-900 mb-1 pb-4'
+            className='text-center block text-base hover:text-gray-900  pb-4'
           >
             About
           </div>

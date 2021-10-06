@@ -3,7 +3,7 @@ import { VFC, memo } from 'react'
 export const Footer: VFC = memo(() => {
   return (
     <>
-      <footer className='text-gray-600 body-font bg-indigo-700'>
+      <footer className='text-gray-600 body-font bg-indigo-700 dark:bg-indigo-900'>
         <div className='container px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
           <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
             <a
@@ -84,7 +84,7 @@ export const Footer: VFC = memo(() => {
             </div>
           </div>
         </div>
-        <div className='bg-indigo-900'>
+        <div className='bg-indigo-900 dark:bg-indigo-900'>
           <div className='container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row'>
             <p className='text-white text-sm text-center sm:text-left'>
               © 2021 Shadow Chat —
