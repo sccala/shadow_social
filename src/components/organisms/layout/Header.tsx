@@ -11,7 +11,7 @@ export const Header: VFC = memo(() => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <header className='text-gray-600 body-font bg-gray-100 dark:bg-indigo-900'>
+    <header className='text-gray-600 body-font bg-gray-100 dark:bg-indigo-900 border-b dark:border-gray-500'>
       <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center sticky'>
         <div
           className='flex font-medium items-center text-primary  md:sm-0 cursor-pointer'

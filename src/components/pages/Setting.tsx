@@ -9,7 +9,6 @@ export const Setting: VFC = memo(() => {
           {/* setting  */}
           <div className='bg-primary px-4 rounded-md w-full'>
             <div className='flex justify-between w-full'></div>
-
             <table className='table-auto border-collapse w-full'>
               <thead>
                 <tr className='text-sm font-medium text-primary text-left'>

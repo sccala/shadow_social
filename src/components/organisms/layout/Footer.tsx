@@ -3,7 +3,7 @@ import { VFC, memo } from 'react'
 export const Footer: VFC = memo(() => {
   return (
     <>
-      <footer className='text-gray-600 body-font bg-indigo-700 dark:bg-indigo-900'>
+      <footer className='text-gray-600 body-font bg-indigo-700 dark:bg-indigo-900 border-t border-gray-500'>
         <div className='container px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col'>
           <div className='w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left'>
             <a
@@ -24,7 +24,7 @@ export const Footer: VFC = memo(() => {
                   d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
                 />
               </svg>
-              
+
               <span className='ml-3 text-xl text-white'>Shadow Chat</span>
             </a>
             <p className='mt-2 text-sm text-white'>
@@ -37,7 +37,7 @@ export const Footer: VFC = memo(() => {
               <nav className='list-none mb-10 text-white text-sm hover:text-indigo-300'>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home/chat'>
-                   Home
+                    Home
                   </a>
                 </li>
                 <li>
@@ -67,7 +67,7 @@ export const Footer: VFC = memo(() => {
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                   Developer
+                    Developer
                   </a>
                 </li>
                 <li>
@@ -77,7 +77,7 @@ export const Footer: VFC = memo(() => {
                 </li>
                 <li>
                   <a className='text-white hover:text-indigo-300' href='/home'>
-                   Privacy Policies
+                    Privacy Policies
                   </a>
                 </li>
               </nav>

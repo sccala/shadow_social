@@ -24,7 +24,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundImage: ['dark'],
+    },
   },
   plugins: [],
 }
