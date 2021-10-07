@@ -7,14 +7,14 @@ export const Setting: VFC = memo(() => {
       <div className='bg-primary py-20'>
         <div className='w-2/3 mx-auto'>
           {/* setting  */}
-          <div className=' bg-secondary shadow-md rounded-md my-6'>
+          <div className='bg-secondary shadow-md rounded-md my-6'>
             <table className='text-left w-full border-collapse '>
               <thead>
                 <tr>
-                  <th className='text-sm font-medium text-primary text-left px-4 py-2 bg-secondary rounded-tl-md'>
+                  <th className='text-sm font-medium text-primary text-left px-4 py-2 bg-gray-300 dark:bg-indigo-800 rounded-tl-md'>
                     Setting
                   </th>
-                  <th className='text-sm font-medium text-primary text-left px-4 py-2 bg-secondary rounded-tr-md'>
+                  <th className='text-sm font-medium text-primary text-left px-4 py-2 bg-gray-300 dark:bg-indigo-800 rounded-tr-md'>
                     ON / OFF
                   </th>
                 </tr>
@@ -22,15 +22,19 @@ export const Setting: VFC = memo(() => {
               <tbody className='text-sm font-normal text-primary'>
                 <tr className='hover:bg-gray-100 dark:hover:bg-gray-700 border-b border-gray-200'>
                   <td className='px-4 py-4'>Dark Mode</td>
-                  <td className='px-4 py-4'>
-                    <DarkModeToggle />
-                  </td>
+                  <div className='flex'>
+                    <td className='px-4 items-center'>
+                      <DarkModeToggle />
+                    </td>
+                  </div>
                 </tr>
                 <tr className='hover:bg-gray-100  border-b border-gray-200 dark:hover:bg-gray-700'>
                   <td className='px-4 py-4'>Change Font</td>
-                  <td className='px-4 py-4'>
-                    <ChangeFontToggle />
-                  </td>
+                  <div className='flex'>
+                    <td className='px-4 items-center'>
+                      <ChangeFontToggle />
+                    </td>
+                  </div>
                 </tr>
                 <tr className='hover:bg-gray-100  border-b border-gray-200 dark:hover:bg-gray-700'>
                   <td className='px-4 py-4'>Sound</td>

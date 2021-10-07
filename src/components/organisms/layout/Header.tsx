@@ -1,13 +1,16 @@
-import { VFC, memo, useCallback, useState } from 'react'
+import { VFC, memo, useCallback, useState, useContext } from 'react'
 import { useHistory } from 'react-router'
+import { ThemeContext } from '../../../hooks/providers/themeContext'
 
 export const Header: VFC = memo(() => {
   const history = useHistory()
+  const { theme, setTheme } = useContext(ThemeContext)
+
   const onClickHome = useCallback(() => history.push('/home'), [history])
-   const onClickChat = useCallback(() => history.push('/home/chat'), [history])
+  const onClickChat = useCallback(() => history.push('/home/chat'), [history])
   const onClickUserManagement = useCallback(() => history.push('/home/user_management'), [history])
   const onClickSetting = useCallback(() => history.push('/home/setting'), [history])
-  const onClickAbout=useCallback(()=>history.push('/home/about'),[history])
+  const onClickAbout = useCallback(() => history.push('/home/about'), [history])
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
@@ -50,13 +53,16 @@ export const Header: VFC = memo(() => {
             About
           </div>
         </nav>
-        <button className='items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
+        <button className='items-center bg-gray-200 dark:bg-indigo-800 dark:hover:bg-indigo-700 dark:text-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 sm:mt-0'>
           Logout
         </button>
-        <button className='items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
+        <button
+          className='items-center border-0 py-1 px-1 mx-2 text-primary hover:bg-gray-200 dark:hover:bg-indigo-800 rounded-full text-base mt-4 sm:mt-0'
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='w-6 h-6 '
+            className='w-6 h-6 items-center'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -65,15 +71,19 @@ export const Header: VFC = memo(() => {
               stroke-linecap='round'
               stroke-linejoin='round'
               stroke-width='1.5'
-              d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+              d={
+                theme === 'dark'
+                  ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
+                  : 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+              }
             />
           </svg>
         </button>
       </div>
       {/* mobile navbar */}
-      <div className='cursor-pointer sticky'>
-        <div className='flex justify-between md:hidden px-8 py-4'>
-          <div className='flex'>
+      <div className='cursor-pointer'>
+        <div className='text-primary flex justify-between md:hidden px-8 py-4'>
+          <div className='flex items-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='w-8 h-8 text-white py-2 bg-indigo-500 rounded-full'
@@ -89,9 +99,8 @@ export const Header: VFC = memo(() => {
                 onClick={onClickHome}
               />
             </svg>
-
             <span
-              className='ml-3 font-medium items-center text-gray-900  cursor-pointer'
+              className='ml-3 font-medium items-center text-primary cursor-pointer'
               onClick={onClickHome}
             >
               Shadow Chat
@@ -118,30 +127,33 @@ export const Header: VFC = memo(() => {
         <div className={'md:hidden' + (navbarOpen ? ' block' : ' hidden')}>
           <div
             onClick={onClickHome}
-            className='text-center block text-base  hover:text-gray-900 mb-1'
+            className='text-center block text-base text-primary hover:text-accent mb-1'
           >
             Home
           </div>
           <div
             onClick={onClickUserManagement}
-            className='text-center block text-base hover:text-gray-900 mb-1'
+            className='text-center block text-base text-primary hover:text-accent mb-1'
           >
             Users
           </div>
           <div
             onClick={onClickSetting}
-            className='text-center block text-base hover:text-gray-900 mb-1'
+            className='text-center block text-base text-primary hover:text-accent mb-1'
           >
             Setting
           </div>
           <div
             onClick={onClickAbout}
-            className='text-center block text-base hover:text-gray-900  pb-4'
+            className='text-center block text-base hover:text-accent text-primary mb-1'
           >
             About
           </div>
-          <div className='content-center'>
-            <button className='items-center border-0 py-1 px-3 focus:outline-none flex-col-1 content-center hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
+          <div className='flex flex-row relative'>
+            <button
+              className='border-0 py-1 text-primary hover:text-accent rounded text-base mt-4 mx-auto sm:mt-0 justify-self-center mb-4'
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='w-6 h-6 '
@@ -153,7 +165,11 @@ export const Header: VFC = memo(() => {
                   stroke-linecap='round'
                   stroke-linejoin='round'
                   stroke-width='1.5'
-                  d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                  d={
+                    theme === 'dark'
+                      ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
+                      : 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                  }
                 />
               </svg>
             </button>
