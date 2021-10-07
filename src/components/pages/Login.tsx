@@ -40,7 +40,7 @@ export const Login: VFC = memo(() => {
           </button>
         </div>
         <div className='flex justify-center items-center'>
-          <div className='py-12 px-12 bg-white rounded-2xl shadow-xl z-20'>
+          <div className='py-12 px-12 bg-white dark:bg-indigo-400 rounded-2xl shadow-xl z-20'>
             <div>
               <h1 className='text-3xl font-bold text-center mb-4 cursor-pointer'>Welcome Back!</h1>
               <p className='w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer'>
@@ -50,7 +50,7 @@ export const Login: VFC = memo(() => {
             <div className='space-y-4'>
               <input
                 type='text'
-                placeholder='Email Addres'
+                placeholder='Enter 1 for user, 10 for admin access'
                 className='block text-sm py-3 px-4 rounded-lg w-full border outline-none'
                 value={userId}
                 onChange={onCangeUserId}
