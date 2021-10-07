@@ -11,7 +11,7 @@ export const Header: VFC = memo(() => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <header className='text-gray-600 body-font bg-gray-100 dark:bg-indigo-900 border-b dark:border-gray-500'>
+    <header className='text-gray-600 body-font bg-gray-100 dark:bg-indigo-900 dark:border-gray-100'>
       <div className='container mx-auto p-4 flex-col md:flex-row hidden md:flex items-center sticky'>
         <div
           className='flex font-medium items-center text-primary  md:sm-0 cursor-pointer'
@@ -139,6 +139,24 @@ export const Header: VFC = memo(() => {
             className='text-center block text-base hover:text-gray-900  pb-4'
           >
             About
+          </div>
+          <div className='content-center'>
+            <button className='items-center border-0 py-1 px-3 focus:outline-none flex-col-1 content-center hover:bg-gray-100 rounded text-base mt-4 sm:mt-0'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='w-6 h-6 '
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='1.5'
+                  d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

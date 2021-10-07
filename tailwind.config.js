@@ -30,16 +30,17 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       gray: colors.coolGray,
-      blue: colors.lightBlue,
+      blue: colors.sky,
       red: colors.rose,
       pink: colors.fuchsia,
       indigo: colors.indigo,
-      white: colors.white
+      white: colors.white,
     },
   },
   variants: {
     extend: {
       backgroundImage: ['dark'],
+      dropShadow: ['hover', 'focus'],
     },
   },
   plugins: [],
