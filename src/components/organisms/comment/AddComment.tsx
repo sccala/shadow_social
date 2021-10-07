@@ -26,7 +26,7 @@ export const AddComment: VFC<Props> = memo(props => {
 
   return (
     <>
-      <div style={{ maxWidth: '400px' }} className='px-auto'>
+      <div style={{ maxWidth: '400px' }} className='px-auto '>
         {/* Plus icon button */}
         <button type='submit' onClick={showNewComment} className='my-4'>
           <svg
@@ -48,16 +48,9 @@ export const AddComment: VFC<Props> = memo(props => {
       {/* new commet input */}
 
       {showAddComment ? (
-        <CSSTransition
-          timeout={600}
-          in={showNewComment}
-          classNames='fade'
-          unmountOnExit
-          appear
-          
-        >
+        <CSSTransition timeout={600} in={showNewComment} classNames='fade' unmountOnExit appear>
           <div
-            className='rounded-lg bg-white shadow p-5 text-gray-800 
+            className='rounded-lg bg-secondary shadow p-5 text-primary 
           transition-transform 
           duration-300 
           ease-in-out'
@@ -69,7 +62,7 @@ export const AddComment: VFC<Props> = memo(props => {
               </div>
               <div className='flex-grow pl-3'>
                 <h6 className='font-bold text-md'>Joe Blow</h6>
-                <p className='text-xs text-gray-600'>@joe.blow</p>
+                <p className='text-xs text-secondary'>@joe.blow</p>
               </div>
             </div>
 
@@ -78,14 +71,14 @@ export const AddComment: VFC<Props> = memo(props => {
                 style={{ boxSizing: 'border-box', maxWidth: '400px' }}
                 minRows={4}
                 placeholder='whisper here'
-                className='text-sm w-full bg-gray-100 rounded border border-indigo-400 placeholder-indigo-400 leading-normal resize-none h-20 py-2 px-3 focus:outline-none focus:bg-white'
+                className='text-sm w-full bg-gray-100 dark:bg-gray-400 rounded border border-indigo-400 placeholder-indigo-500 leading-normal resize-none h-20 py-2 px-3 focus:outline-none focus:bg-white'
                 value={newComment}
                 onChange={onChangeTodoText}
                 maxLength={280}
               />
             </div>
             <div className='w-full'>
-              <p className='text-xs text-gray-500 text-right'>Current: Time</p>
+              <p className='text-xs text-secondary text-right'>Current: Time</p>
               <div className='grid grid-cols-6'>
                 <SecondaryButton
                   className='col-span-2 col-start-2 mx-auto my-4'

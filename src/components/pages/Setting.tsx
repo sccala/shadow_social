@@ -20,7 +20,7 @@ export const Setting: VFC = memo(() => {
                 </tr>
               </thead>
               <tbody className='text-sm font-normal text-primary'>
-                <tr className='hover:bg-gray-100 dark:hover:bg-gray-700 border-b border-gray-200'>
+                <tr className='hover:bg-gray-200 dark:hover:bg-gray-700 border-b border-gray-200'>
                   <td className='px-4 py-4'>Dark Mode</td>
                   <div className='flex'>
                     <td className='px-4 items-center'>
@@ -28,7 +28,7 @@ export const Setting: VFC = memo(() => {
                     </td>
                   </div>
                 </tr>
-                <tr className='hover:bg-gray-100  border-b border-gray-200 dark:hover:bg-gray-700'>
+                <tr className='hover:bg-gray-200  border-b border-gray-200 dark:hover:bg-gray-700'>
                   <td className='px-4 py-4'>Change Font</td>
                   <div className='flex'>
                     <td className='px-4 items-center'>
@@ -36,11 +36,11 @@ export const Setting: VFC = memo(() => {
                     </td>
                   </div>
                 </tr>
-                <tr className='hover:bg-gray-100  border-b border-gray-200 dark:hover:bg-gray-700'>
+                <tr className='hover:bg-gray-200  border-b border-gray-200 dark:hover:bg-gray-700'>
                   <td className='px-4 py-4'>Sound</td>
                   <td className='px-4 py-4'>Coming Soon</td>
                 </tr>
-                <tr className='hover:bg-gray-100 hover:rounded-b-md border-b border-gray-200 dark:hover:bg-gray-700'>
+                <tr className='hover:bg-gray-200 hover:rounded-b-md border-b border-gray-200 dark:hover:bg-gray-700'>
                   <td className='px-4 py-4'>Reduce graphical motion to save evergy</td>
                   <td className='px-4 py-4'>Coming Soon</td>
                 </tr>
