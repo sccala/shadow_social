@@ -13,10 +13,14 @@ export const Login: VFC = memo(() => {
 
   return (
     <>
-      <div className='w-full min-h-screen bg-indigo-500 dark:bg-indigo-900'>
+      <div className='w-full min-h-screen bg-indigo-500 dark:bg-primary'>
         <div className='flex justify-center items-center'>
           <button
-            className=' border-0 py-1 text-primary hover:text-accent rounded text-base pt-8 mx-auto sm:mt-0 mb-4'
+            className='border-0 py-1 
+            text-gray-200 hover:text-indigo-600 
+            dark:text-gray-300 
+            dark:hover:text-gray-400 
+            text-base pt-8 mx-auto sm:mt-0 mb-4'
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           >
             <svg
@@ -32,18 +36,20 @@ export const Login: VFC = memo(() => {
                 strokeWidth='1.5'
                 d={
                   theme === 'dark'
-                    ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
-                    : 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                    ? 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                    : 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
                 }
               />
             </svg>
           </button>
         </div>
         <div className='flex justify-center items-center'>
-          <div className='py-12 px-12 bg-white dark:bg-indigo-400 rounded-2xl shadow-xl z-20'>
+          <div className='py-12 px-12 bg-white dark:bg-indigo-800 dark:border-gray-500 rounded-2xl shadow-xl z-20'>
             <div>
-              <h1 className='text-3xl font-bold text-center mb-4 cursor-pointer'>Welcome Back!</h1>
-              <p className='w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer'>
+              <h1 className='text-3xl font-bold text-center mb-4 cursor-pointer text-primary'>
+                Welcome Back!
+              </h1>
+              <p className='w-80 text-center text-sm mb-8 font-semibold text-primary tracking-wide cursor-pointer'>
                 Sign in with your user ID! People are waiting for you.
               </p>
             </div>
@@ -60,7 +66,7 @@ export const Login: VFC = memo(() => {
               <SecondaryButton disabled={userId === ''} onClick={onClickLogin}>
                 Sign in
               </SecondaryButton>
-              <p className='mt-4 text-sm'>
+              <p className='mt-4 text-sm text-primary'>
                 You don't have an account yet?
                 <span className='underline cursor-pointer'> Sign Up</span>
               </p>

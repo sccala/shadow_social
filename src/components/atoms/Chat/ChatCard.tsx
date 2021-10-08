@@ -14,7 +14,7 @@ export const ChatCard: VFC<Props> = memo(props => {
   const { userName, imageUrl, fullName } = props
   const [like, setLike] = useState(false)
   const [light, setLight] = useState(false)
-
+  const [comment, setComment] = useState('')
   const onClickLike = () => setLike(!like)
   const onClickLight = () => setLight(!light)
   return (
@@ -37,10 +37,9 @@ export const ChatCard: VFC<Props> = memo(props => {
         </div>
         <div className='mb-4'>
           <p className='text-sm'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati laudantium
-            recusandae, debitis eum voluptatem ad, illo voluptatibus temporibus odio provident.
-            Laboriosam accusamus necessitatibus tenetur praesentium ullam voluptates nulla
-            reprehenderit? 🤣
+            {comment === ''
+              ? 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecatlaudantium recusandae, debitis eum voluptatem ad, illo voluptatibus temporibus odioprovident. Laboriosam accusamus necessitatibus tenetur praesentium ullam voluptatesnulla reprehenderit 🤣'
+              : comment}
           </p>
         </div>
         <p className='text-xs text-gray-400 text-right'>Oct 15th 8:33pm</p>

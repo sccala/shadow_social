@@ -12,7 +12,14 @@ export const SecondaryButton: VFC<Props> = memo(props => {
 
   return (
     <button
-      className={`${className} m-3 py-2 w-64 text-sm text-white bg-indigo-500 dark:bg-indigo-600  rounded-2xl hover:bg-indigo-700 not-sr-only bg-violet-500`}
+      className={`${className} m-3 py-2 w-64 text-sm text-white rounded-2xl not-sr-only 
+      bg-indigo-500 
+      hover:bg-indigo-600 
+      dark:bg-indigo-600 
+      dark:border-gray-400  
+      dark:hover:bg-indigo-700
+      shadow-md`
+    }
       disabled={disabled}
       onClick={onClick}
     >

@@ -1,7 +1,9 @@
-import { VFC, memo, useState } from 'react'
-import TextareaAutosize from 'react-textarea-autosize'
+import { VFC, memo, useEffect, useState } from 'react'
+import { useAllUsers } from '../../../hooks/useAllUsers'
 import { SecondaryButton } from '../../atoms/button/SecondaryButton'
-import '../../../index.css'
+import { ChatCard } from '../../atoms/Chat/ChatCard'
+
+import TextareaAutosize from 'react-textarea-autosize'
 import { CSSTransition } from 'react-transition-group'
 
 type Props = {
@@ -9,12 +11,16 @@ type Props = {
   className?: string
 }
 
-export const AddComment: VFC<Props> = memo(props => {
+const AddComment: VFC<Props> = memo(props => {
   const [showAddComment, setShowAddComment] = useState(false)
-  const [newComment, setNewComment] = useState()
+  const [newComment, setNewComment] = useState('')
   const showNewComment = () => setShowAddComment(!showAddComment)
   const onClickSubmit = () => {
-    alert('Are you sure to send?'  )
+    //    if (newComment === '') return
+    //    const comments = [ /*...all comments */, newComment]
+      
+       
+    alert('Are you sure to send?')
     //close the button//
     setShowAddComment(!showAddComment)
   }
@@ -29,7 +35,7 @@ export const AddComment: VFC<Props> = memo(props => {
         <button type='submit' onClick={showNewComment} className='my-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-10 w-10 text-indigo-500  hover:text-indigo-900 focus:text-indigo-900'
+            className='h-10 w-10 text-indigo-500 hover:text-indigo-900 focus:text-indigo-900'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -43,8 +49,8 @@ export const AddComment: VFC<Props> = memo(props => {
           </svg>
         </button>
       </div>
-      {/* new commet input */}
 
+      {/* new commet input */}
       {showAddComment ? (
         <CSSTransition timeout={600} in={showNewComment} classNames='fade' unmountOnExit appear>
           <div
@@ -92,3 +98,39 @@ export const AddComment: VFC<Props> = memo(props => {
     </>
   )
 })
+
+export const CommentFeed: VFC = memo((props) => {
+     const { getUsers, users } = useAllUsers()
+    //  const { comments, onClickSubmit, onClickDelete } = props
+     useEffect(() => getUsers())
+  return (
+    <>
+      <div className='items-center flex flex-col justify-center pt-8 mb-8'>
+        <div className=' text-indigo-600 dark:text-primary text-lg'>What's happening?</div>
+        <AddComment />
+      </div>
+      <div className='grid grid-cols-2 gap-4 mb-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:px-6 md:px-16 justify-self-center'>
+        {/* {comments.map((comments,index)=> {
+            return (
+        <ChatCard
+          key={comments.id}
+          userName='my user name'
+          imageUrl='https://source.unsplash.com/random'
+          fullName='my fake name'
+          className='grid-span-2 grid-cols-6'
+        />)})} */}
+       
+        {users.map(user => (
+          <ChatCard
+            key={user.id}
+            userName={user.username}
+            imageUrl='https://source.unsplash.com/random'
+            fullName={user.name}
+            className='grid-span-2 grid-cols-6'
+          />
+        ))}
+      </div>
+    </>
+  )
+})
+

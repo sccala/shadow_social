@@ -12,10 +12,13 @@
 
 .dark {
   --color-bg-primary: #29374b;
-  --color-bg-secondary: #32445c;
+  --color-bg-secondary: #3f5169;
+  --color-bg-tertiary: #f3f3f3;
   --color-bg-accent: #6461af;
   --color-text-primary: #f7fafc;
   --color-text-secondary: #e2e8f0;
+   
+  
   --color-text-accent: #A5B4FC;
 }
 

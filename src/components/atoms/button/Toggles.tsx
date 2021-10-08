@@ -13,7 +13,7 @@ export const DarkModeToggle: VFC<Props> = memo(() => {
     <div className='flex flex-col'>
       <label className='mt-3 inline-flex items-center cursor-pointer'>
         <span className='relative'>
-          <span className='block w-10 h-6 bg-gray-200 rounded-full shadow-inner'></span>
+          <span className='block w-10 h-6 bg-gray-200 rounded-full shadow-inner-md'></span>
           <span
             className={`${
               theme === 'dark' ? 'bg-indigo-400 transform translate-x-full' : 'bg-white'
