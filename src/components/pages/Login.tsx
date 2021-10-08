@@ -27,9 +27,9 @@ export const Login: VFC = memo(() => {
               stroke='currentColor'
             >
               <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='1.5'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='1.5'
                 d={
                   theme === 'dark'
                     ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'

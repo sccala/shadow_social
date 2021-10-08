@@ -28,9 +28,9 @@ export const Header: VFC = memo(() => {
             stroke='currentColor'
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
               d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
             />
           </svg>
@@ -68,9 +68,9 @@ export const Header: VFC = memo(() => {
             stroke='currentColor'
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='1.5'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='1.5'
               d={
                 theme === 'dark'
                   ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
@@ -92,9 +92,9 @@ export const Header: VFC = memo(() => {
               stroke='currentColor'
             >
               <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 d='M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
                 onClick={onClickHome}
               />
@@ -115,9 +115,9 @@ export const Header: VFC = memo(() => {
               stroke='currentColor'
             >
               <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
                 d='M4 6h16M4 12h16M4 18h16'
               />
             </svg>
@@ -162,9 +162,9 @@ export const Header: VFC = memo(() => {
                 stroke='currentColor'
               >
                 <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='1.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='1.5'
                   d={
                     theme === 'dark'
                       ? 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'

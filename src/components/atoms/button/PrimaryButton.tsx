@@ -12,10 +12,12 @@ export const PrimaryButton: VFC<Props> = memo(props => {
 
   return (
     <button
-      className={`${className} m-3 py-3 text-md w-64 text-white bg-indigo-500 border-white
+      className={`${className} m-3 py-3 text-md w-64 text-white 
+      bg-indigo-500 border dark:border-white border-none
       hover:bg-indigo-700 not-sr-only 
-      dark:hover:bg-gray-400 
-      dark:text-indigo-800 rounded-2xl
+      dark:bg-gray-700
+      dark:hover:bg-gray-800 
+      dark:text-white rounded-2xl
        `}
       disabled={disabled}
       onClick={onClick}

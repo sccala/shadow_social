@@ -10,7 +10,7 @@ export const About: VFC = memo(() => {
   return (
     <div className='bg-primary'>
       <div
-        className=' py-32 bg-cover h-screen w-screen justify-center items-center text-primary text-center grid grid-cols-6 filter contrast-125'
+        className=' py-32 bg-cover h-screen w-screen justify-center items-center text-primary text-center grid grid-cols-6 backdrop-contrast-200'
         style={{
           backgroundImage: 'url( /asset/images/abouthero.png )',
           backgroundPosition: 'center',
@@ -41,9 +41,9 @@ export const About: VFC = memo(() => {
             stroke='white'
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='1'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='1'
               d='M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z'
             />
           </svg>
