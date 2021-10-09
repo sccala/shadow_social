@@ -19,9 +19,9 @@ const AddComment: VFC<Props> = memo(props => {
     //    if (newComment === '') return
     //    const comments = [ /*...all comments */, newComment]
       
-       
     alert('Are you sure to send?')
     //close the button//
+    setNewComment(newComment)
     setShowAddComment(!showAddComment)
   }
   const onChangeTodoText = event => {
@@ -64,6 +64,23 @@ const AddComment: VFC<Props> = memo(props => {
               <div className='overflow-hidden rounded-full w-12 h-12'>
                 <img src='https://uifaces.co/our-content/donated/1H_7AxP0.jpg' alt='logo' />
               </div>
+              <div className='overflow-hidden rounded-full w-12 h-12'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='h-6 w-6'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                  
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+                  />
+                </svg>
+              </div>
               <div className='flex-grow pl-3'>
                 <h6 className='font-bold text-primary text-md'>Joe Blow</h6>
                 <p className='text-xs text-secondary'>@joe.blow</p>
@@ -101,8 +118,11 @@ const AddComment: VFC<Props> = memo(props => {
 
 export const CommentFeed: VFC = memo((props) => {
      const { getUsers, users } = useAllUsers()
+     
+     
     //  const { comments, onClickSubmit, onClickDelete } = props
      useEffect(() => getUsers())
+    
   return (
     <>
       <div className='items-center flex flex-col justify-center pt-8 mb-8'>
@@ -119,7 +139,7 @@ export const CommentFeed: VFC = memo((props) => {
           fullName='my fake name'
           className='grid-span-2 grid-cols-6'
         />)})} */}
-       
+
         {users.map(user => (
           <ChatCard
             key={user.id}
@@ -127,6 +147,7 @@ export const CommentFeed: VFC = memo((props) => {
             imageUrl='https://source.unsplash.com/random'
             fullName={user.name}
             className='grid-span-2 grid-cols-6'
+            
           />
         ))}
       </div>
