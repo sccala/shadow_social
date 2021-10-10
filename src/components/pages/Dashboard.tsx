@@ -1,5 +1,5 @@
 import { VFC, memo } from 'react'
-import { AddComment } from '../organisms/comment/AddComment'
+import { ComposeForm } from '../organisms/comment/ComposeForm'
 import { CommentFeed } from '../organisms/layout/CommentFeed'
 
 export const DashboardChat: VFC = memo(() => {
@@ -11,7 +11,7 @@ export const DashboardChat: VFC = memo(() => {
         </div>
         <div className='w-full bg-secondary'>
           <div className='items-center flex flex-col justify-center mt-8 py-8'>
-            <AddComment />
+            <ComposeForm />
           </div>
         </div>
       </div>

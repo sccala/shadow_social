@@ -9,16 +9,17 @@ type Props = {
   className?: string
 }
 
-export const AddComment: VFC<Props> = memo(props => {
-  const [showAddComment, setShowAddComment] = useState(false)
+export const ComposeForm: VFC<Props> = memo(props => {
+  const [showComposeForm, setShowComposeForm] = useState(false)
   const [newComment, setNewComment] = useState()
-  const showNewComment = () => setShowAddComment(!showAddComment)
+
+  const onClickShowComposeForm = () => setShowComposeForm(!showComposeForm)
   const onClickSubmit = () => {
     alert('Are you sure to send?'  )
     //close the button//
-    setShowAddComment(!showAddComment)
+    setShowComposeForm(!showComposeForm)
   }
-  const onChangeTodoText = event => {
+  const onChangeCommentCompose = event => {
     setNewComment(event.target.value)
   }
 
@@ -26,7 +27,7 @@ export const AddComment: VFC<Props> = memo(props => {
     <>
       <div style={{ maxWidth: '400px' }} className='px-auto '>
         {/* Plus icon button */}
-        <button type='submit' onClick={showNewComment} className='my-4'>
+        <button type='submit' onClick={onClickShowComposeForm} className='my-4'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='h-10 w-10 text-indigo-500  hover:text-indigo-900 focus:text-indigo-900'
@@ -45,8 +46,8 @@ export const AddComment: VFC<Props> = memo(props => {
       </div>
       {/* new commet input */}
 
-      {showAddComment ? (
-        <CSSTransition timeout={600} in={showNewComment} classNames='fade' unmountOnExit appear>
+      {showComposeForm ? (
+        <CSSTransition timeout={600} in={showComposeForm} classNames='fade' unmountOnExit appear>
           <div
             className='rounded-lg bg-secondary shadow p-5 text-primary 
           transition-transform 
@@ -71,7 +72,7 @@ export const AddComment: VFC<Props> = memo(props => {
                 placeholder='whisper here'
                 className='text-sm w-full dark:text-primary bg-gray-200 dark:bg-gray-400 rounded border border-indigo-400 placeholder-indigo-500 dark:placeholder-gray-500 leading-normal resize-none h-20 py-2 px-3 focus:outline-none '
                 value={newComment}
-                onChange={onChangeTodoText}
+                onChange={onChangeCommentCompose}
                 maxLength={280}
               />
             </div>
