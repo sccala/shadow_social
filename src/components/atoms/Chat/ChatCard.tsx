@@ -8,6 +8,7 @@ type Props = {
   userId?: number
   fullName: string
   onClick?: () => void
+  comment: string
 }
 
 export const ChatCard: VFC<Props> = memo(props => {
@@ -37,12 +38,10 @@ export const ChatCard: VFC<Props> = memo(props => {
         </div>
         <div className='mb-4'>
           <p className='text-sm'>
-            {comment === ''
-              ? 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecatlaudantium recusandae, debitis eum voluptatem ad, illo voluptatibus temporibus odioprovident. Laboriosam accusamus necessitatibus tenetur praesentium ullam voluptatesnulla reprehenderit 🤣'
-              : comment}
+            {comment}
           </p>
         </div>
-        <p className='text-xs text-gray-400 text-right'>Oct 15th 8:33pm</p>
+        <p className='text-xs text-gray-400 text-right'>Jan 1st 12:12pm</p>
         <p
           className='text-xs text-accent 
         dark:text-primay float-right flex my-2'

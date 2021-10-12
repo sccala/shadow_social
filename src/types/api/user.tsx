@@ -4,6 +4,7 @@ export type User = {
   username: string
   email: string
   hobbies: string
+  comment:string
   address: {
     street: string
     suite: string

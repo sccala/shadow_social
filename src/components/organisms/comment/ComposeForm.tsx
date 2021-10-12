@@ -15,7 +15,11 @@ export const ComposeForm: VFC<Props> = memo(props => {
 
   const onClickShowComposeForm = () => setShowComposeForm(!showComposeForm)
   const onClickSubmit = () => {
-    alert('Are you sure to send?'  )
+    alert('Are you sure to send?')
+    if (newComment === '') return
+
+    // const allComments = [newComment]
+    
     //close the button//
     setShowComposeForm(!showComposeForm)
   }

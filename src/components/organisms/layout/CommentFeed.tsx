@@ -1,4 +1,4 @@
-import { VFC, memo, useEffect, useState } from 'react'
+import { VFC, memo, useEffect } from 'react'
 import { useAllUsers } from '../../../hooks/useAllUsers'
 // import { SecondaryButton } from '../../atoms/button/SecondaryButton'
 import { ChatCard } from '../../atoms/Chat/ChatCard'
@@ -12,7 +12,6 @@ import { ComposeForm } from '../comment/ComposeForm'
 
 export const CommentFeed: VFC = memo((props) => {
      const { getUsers, users } = useAllUsers()
-     
      
     //  const { comments, onClickSubmit, onClickDelete } = props
      useEffect(() => getUsers())
@@ -40,6 +39,11 @@ export const CommentFeed: VFC = memo((props) => {
             userName={user.username}
             imageUrl='https://source.unsplash.com/random'
             fullName={user.name}
+            comment={
+              user.comment === ''
+                ? 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecatlaudantium recusandae, debitis eum voluptatem ad, illo voluptatibus temporibus odioprovident. Laboriosam accusamus necessitatibus tenetur praesentium ullam voluptatesnulla reprehenderit 🤣'
+                : user.comment
+            }
             className='grid-span-2 grid-cols-6'
           />
         ))}
