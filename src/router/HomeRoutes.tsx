@@ -1,5 +1,5 @@
 import { About } from "../components/pages/About"
-import { DashboardChat } from "../components/pages/Dashboard"
+import { CommentFeed } from "../components/pages/CommentFeed"
 import { Home } from "../components/pages/Home"
 import { Page404 } from "../components/pages/Page404"
 import { Setting } from "../components/pages/Setting"
@@ -27,9 +27,9 @@ export const homeRoutes = [
     children: <Setting />,
   },
   {
-    path: '/chat',
+    path: '/feed',
     exact: false,
-    children: <DashboardChat />,
+    children: <CommentFeed />,
   },
   {
     path: '*',

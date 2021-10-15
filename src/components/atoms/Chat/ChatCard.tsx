@@ -4,7 +4,7 @@ import { VFC, memo, useState } from 'react'
 type Props = {
   className?: string
   userName: string
-  imageUrl: string
+  avatar: string
   userId?: number
   fullName: string
   onClick?: () => void
@@ -12,10 +12,9 @@ type Props = {
 }
 
 export const ChatCard: VFC<Props> = memo(props => {
-  const { userName, imageUrl, fullName } = props
+  const { userName, avatar, fullName, comment } = props
   const [like, setLike] = useState(false)
   const [light, setLight] = useState(false)
-  const [comment, setComment] = useState('')
   const onClickLike = () => setLike(!like)
   const onClickLight = () => setLight(!light)
   return (
@@ -26,7 +25,7 @@ export const ChatCard: VFC<Props> = memo(props => {
       >
         <div className='flex mb-4'>
           <div className='overflow-hidden rounded-full w-12 h-12'>
-            <img src={imageUrl} alt='logo' />
+            <img src={avatar} alt='logo' />
           </div>
           <div className='flex-grow pl-3'>
             <h6 className='font-bold text-md'>{userName}</h6>
@@ -37,9 +36,7 @@ export const ChatCard: VFC<Props> = memo(props => {
           </div>
         </div>
         <div className='mb-4'>
-          <p className='text-sm'>
-            {comment}
-          </p>
+          <p className='text-sm'>{comment}</p>
         </div>
         <p className='text-xs text-gray-400 text-right'>Jan 1st 12:12pm</p>
         <p

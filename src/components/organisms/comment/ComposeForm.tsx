@@ -5,26 +5,18 @@ import '../../../index.css'
 import { CSSTransition } from 'react-transition-group'
 
 type Props = {
-  onClick?: () => void
   className?: string
+  newComment: string
+  onChange: () => void
+  onClick: () => void
 }
 
 export const ComposeForm: VFC<Props> = memo(props => {
+  const { newComment, onChange, onClick } = props
   const [showComposeForm, setShowComposeForm] = useState(false)
-  const [newComment, setNewComment] = useState()
 
-  const onClickShowComposeForm = () => setShowComposeForm(!showComposeForm)
-  const onClickSubmit = () => {
-    alert('Are you sure to send?')
-    if (newComment === '') return
-
-    // const allComments = [newComment]
-    
-    //close the button//
+  const onClickShowComposeForm = () => {
     setShowComposeForm(!showComposeForm)
-  }
-  const onChangeCommentCompose = event => {
-    setNewComment(event.target.value)
   }
 
   return (
@@ -48,12 +40,12 @@ export const ComposeForm: VFC<Props> = memo(props => {
           </svg>
         </button>
       </div>
-      {/* new commet input */}
+      {/* new comment input */}
 
       {showComposeForm ? (
         <CSSTransition timeout={600} in={showComposeForm} classNames='fade' unmountOnExit appear>
           <div
-            className='rounded-lg bg-secondary shadow p-5 text-primary 
+            className='rounded-lg bg-secondary shadow p-5  mb-8 text-primary 
           transition-transform 
           duration-300 
           ease-in-out'
@@ -76,17 +68,14 @@ export const ComposeForm: VFC<Props> = memo(props => {
                 placeholder='whisper here'
                 className='text-sm w-full dark:text-primary bg-gray-200 dark:bg-gray-400 rounded border border-indigo-400 placeholder-indigo-500 dark:placeholder-gray-500 leading-normal resize-none h-20 py-2 px-3 focus:outline-none '
                 value={newComment}
-                onChange={onChangeCommentCompose}
+                onChange={onChange}
                 maxLength={280}
               />
             </div>
             <div className='w-full'>
               <p className='text-xs text-secondary text-right'>Current: Time</p>
               <div className='grid grid-cols-6'>
-                <SecondaryButton
-                  className='col-span-2 col-start-2 mx-auto my-4'
-                  onClick={onClickSubmit}
-                >
+                <SecondaryButton className='col-span-2 col-start-2 mx-auto my-4' onClick={onClick}>
                   Submit
                 </SecondaryButton>
               </div>

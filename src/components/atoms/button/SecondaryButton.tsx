@@ -1,13 +1,9 @@
-import { VFC, memo, ReactNode } from 'react'
+import { VFC, memo } from 'react'
+import { Button } from '../../../types/button'
 
-type Props = {
-  children: ReactNode
-  disabled?: boolean
-  onClick: () => void
-  className?: string
-}
 
-export const SecondaryButton: VFC<Props> = memo(props => {
+
+export const SecondaryButton: VFC<Button> = memo(props => {
   const { children, disabled = false, onClick, className } = props
 
   return (
@@ -18,8 +14,7 @@ export const SecondaryButton: VFC<Props> = memo(props => {
       dark:bg-indigo-600 
       dark:border-gray-400  
       dark:hover:bg-indigo-700
-      shadow-md`
-    }
+      shadow-md`}
       disabled={disabled}
       onClick={onClick}
     >

@@ -7,7 +7,7 @@ export const Header: VFC = memo(() => {
   const { theme, setTheme } = useContext(ThemeContext)
 
   const onClickHome = useCallback(() => history.push('/home'), [history])
-  const onClickChat = useCallback(() => history.push('/home/chat'), [history])
+  const onClickChat = useCallback(() => history.push('/home/feed'), [history])
   const onClickUserManagement = useCallback(() => history.push('/home/user_management'), [history])
   const onClickSetting = useCallback(() => history.push('/home/setting'), [history])
   const onClickAbout = useCallback(() => history.push('/home/about'), [history])
