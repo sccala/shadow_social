@@ -9,12 +9,18 @@ This is a social app for people who wants to whisper. Comments will be disappear
 - Reliable UI design
 - Responsive
 - Editable user information
+- Dark mode
 
 # Develpoment
 ## Tools and Technologies
-- React
+- React, Redux
 - Typescript
+- Node, Mongoose, Nodemon, Express
+- Api
+- Google Auth
+- JSON web token
 - Tailwind
-- React hooks and context
+- Mongo DB atlas cloud
+- Heroku CLI, Netlify CLI
 ## Demo
 Coming soon
