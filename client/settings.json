@@ -1,9 +1,0 @@
-{
-  "prettier.arrowParens": "avoid",
-  "files.autoSave": "afterDelay",
-  "prettier.jsxSingleQuote": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.useEditorConfig": false,
-  "css.lint.unknownAtRules": "ignore",
-}

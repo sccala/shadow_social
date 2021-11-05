@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 
 import { VFC, memo, useEffect } from 'react'
 import { useAllUsers } from '../../hooks/useAllUsers'
