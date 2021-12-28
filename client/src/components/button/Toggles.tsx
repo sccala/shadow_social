@@ -1,13 +1,13 @@
-import { VFC, memo, useContext } from 'react'
-import { useChangeFont } from '../../../hooks/useToggle'
-import { ThemeContext } from '../../../hooks/providers/themeContext'
+import { VFC, memo,  } from 'react'
+import { useDarkMode } from '../../hooks/useDarkMode'
+import { useChangeFont } from '../../hooks/useToggle'
 
 type Props = {
   className?: string
 }
 
 export const DarkModeToggle: VFC<Props> = memo(() => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const [ isDark, setIsDark ] = useDarkMode()
   
   return (
     <div className='flex flex-col'>
@@ -16,23 +16,23 @@ export const DarkModeToggle: VFC<Props> = memo(() => {
           <span className='block w-10 h-6 bg-gray-200 rounded-full shadow-inner-md'></span>
           <span
             className={`${
-              theme === 'dark' ? 'bg-indigo-400 transform translate-x-full' : 'bg-white'
+              isDark ? 'bg-indigo-400 transform translate-x-full' : 'bg-white'
             } absolute block w-4 h-4 mt-1 ml-1  rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition transform duration-300 ease-in-out`}
           >
             <input
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setIsDark(isDark ? 'light' : 'dark')}
               className='absolute opacity-0 w-0 h-0'
             />
           </span>
         </span>
-        <span className='ml-3 text-sm'>{theme === 'dark' ? 'ON' : 'OFF'}</span>
+        <span className='ml-3 text-sm'>{isDark ? 'ON' : 'OFF'}</span>
       </label>
     </div>
   )
 })
 
 export const ChangeFontToggle: VFC<Props> = memo(() => {
-  const { changeFont, setChangeFont } = useChangeFont()
+  const { changeFont, setChangeFont }= useChangeFont()
   const onClickToggle = () => setChangeFont(v => !v)
   return (
     <div onClick={onClickToggle} className='flex flex-col'>

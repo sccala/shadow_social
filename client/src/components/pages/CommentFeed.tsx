@@ -1,7 +1,7 @@
 import { VFC, memo, useEffect, useState } from 'react'
 import { useAllUsers } from '../../hooks/useAllUsers'
-import { ChatCard } from '../atoms/Chat/ChatCard'
-import { ComposeForm } from '../organisms/comment/ComposeForm'
+import { ChatCard } from '../ChatCard'
+import { ComposeForm } from '../ComposeForm'
 
 export const CommentFeed: VFC = memo(props => {
   const { getUsers, users } = useAllUsers()

@@ -1,5 +1,5 @@
 import { VFC } from 'react'
-import { MessageBanner } from '../atoms/message/MessageBanner'
+import { MessageBanner } from './MessageBanner'
 
 export const MessageSuccess: VFC = () => {
   return (

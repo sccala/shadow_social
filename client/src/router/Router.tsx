@@ -11,7 +11,6 @@ import { homeRoutes } from './HomeRoutes'
 
 export const Router: VFC = memo(() => {
   return (
-    
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
@@ -30,7 +29,6 @@ export const Router: VFC = memo(() => {
               </Switch>
             )}
           />
-
           <Route exact path='/chat'>
             <HeaderLayout />
             <DashboardChat />

@@ -1,5 +1,5 @@
 import { VFC, memo } from 'react'
-import { Button } from '../../../types/button'
+import { Button } from '../../types/button'
 
 export const PrimaryButton: VFC<Button> = memo(props => {
   const { children, disabled = false, onClick, className } = props

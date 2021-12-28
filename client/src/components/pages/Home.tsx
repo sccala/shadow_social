@@ -1,6 +1,6 @@
 import { VFC, memo } from 'react'
 // import { useAllUsers } from '../../hooks/useAllUsers'
-import { PrimaryButton } from '../atoms/button/PrimaryButton'
+import { PrimaryButton } from '../button/PrimaryButton'
 
 export const Home: VFC = memo(() => {
   const onClickLogin = () => {

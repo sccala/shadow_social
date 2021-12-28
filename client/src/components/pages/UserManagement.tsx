@@ -1,10 +1,11 @@
 
 import { VFC, memo, useEffect } from 'react'
 import { useAllUsers } from '../../hooks/useAllUsers'
-import { UserCard } from '../organisms/user/UserCard'
+import { UserCard } from '../UserCard'
 
 export const UserManagement: VFC = memo(() => {
   const { getUsers, users, loading } = useAllUsers()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => getUsers(), [])
 
   return (

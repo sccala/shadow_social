@@ -1,5 +1,5 @@
 import { VFC, memo, ReactNode } from 'react'
-import { Footer } from '../organisms/layout/Footer'
+import { Footer } from '../layout/Footer'
 
 type Props = {
   children: ReactNode

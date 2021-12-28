@@ -1,5 +1,5 @@
 import { VFC, memo } from 'react'
-import { DarkModeToggle, ChangeFontToggle } from '../atoms/button/Toggles'
+import { DarkModeToggle, ChangeFontToggle } from '../button/Toggles'
 
 export const Setting: VFC = memo(() => {
   return (

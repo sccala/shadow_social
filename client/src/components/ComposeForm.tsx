@@ -1,7 +1,7 @@
 import { VFC, memo, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
-import { SecondaryButton } from '../../atoms/button/SecondaryButton'
-import '../../../index.css'
+import { SecondaryButton } from './button/SecondaryButton'
+import '../index.css'
 import { CSSTransition } from 'react-transition-group'
 
 type Props = {

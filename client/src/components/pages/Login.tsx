@@ -1,13 +1,12 @@
-import { VFC, memo, useState, ChangeEvent, useContext } from 'react'
-import { ThemeContext } from '../../hooks/providers/themeContext'
-// import { ThemeProvider } from '../../hooks/providers/themeContext'
+import { VFC, memo, useState, ChangeEvent } from 'react'
 import { useAuth } from '../../hooks/useAuth'
-import { SecondaryButton } from '../atoms/button/SecondaryButton'
+import { useDarkMode } from '../../hooks/useDarkMode'
+import { SecondaryButton } from '../button/SecondaryButton'
 
 export const Login: VFC = memo(() => {
   const [userId, setUserId] = useState<string>('')
   const { login } = useAuth()
-  const { theme, setTheme } = useContext(ThemeContext)
+  const [isDark, setIsDark] = useDarkMode()
   const onCangeUserId = (e: ChangeEvent<HTMLInputElement>) => setUserId(e.target.value)
   const onClickLogin = () => login(userId)
 
@@ -21,7 +20,7 @@ export const Login: VFC = memo(() => {
             dark:text-gray-300 
             dark:hover:text-gray-400 
             text-base pt-8 mx-auto sm:mt-0 mb-4'
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setIsDark(isDark ? 'light' : 'dark')}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -35,7 +34,7 @@ export const Login: VFC = memo(() => {
                 strokeLinejoin='round'
                 strokeWidth='1.5'
                 d={
-                  theme === 'dark'
+                  isDark
                     ? 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
                     : 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'
                 }
